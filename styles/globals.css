@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+ display:flex;
+ justify-content:center;
+ align-items:center;
+
+}
+
+.card_orange {
+    @apply
+    before:block
+    before:absolute
+    before:bottom-0
+    before:left-0
+    before:-translate-x-[12.5%]
+    before:w-[150%]
+    before:h-40
+    before:content-[""]
+    before:bg-red-600
+    before:rounded-tr-[50%]
+    before:rounded-tl-[50%]
+}
