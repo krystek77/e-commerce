@@ -10,6 +10,7 @@ module.exports = {
     extend: {
       fontFamily: {
         html: ["var(--font-montserrat)"],
+        inter:["Inter","sans-serif"]
       },
       colors: {
         primary: {
@@ -23,13 +24,19 @@ module.exports = {
           dark: "#22d3ee",
         },
         black:{
-          DEFAULT:"#1E212B"
+          DEFAULT:"#1E212B",
+          medium:"#727581",
+          light:"#dde0ee"
         },
         green:{
-          DEFAULT:"#4D8B31"
+          DEFAULT:"#4D8B31",
+          medium:"#83c34c",
+          light:"#c1e1a6"
         },
         gold:{
-          DEFAULT:"#FFC800"
+          DEFAULT:"#FFC800",
+          dark:"#ff9c00",
+          light:"#ffebaf"
         }
       },
     },
