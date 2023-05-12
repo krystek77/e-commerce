@@ -14,3 +14,20 @@ body {
 .flex-center {
     @apply justify-center items-center
 }
+.arc__red {
+    @apply 
+    before:block
+    before:content-[""]
+    before:w-[200%]
+    before:h-[35%]
+    before:bg-primary-light
+    before:bg-opacity-80
+    before:absolute
+    before:bottom-0
+    before:left-1/2
+    before:-translate-x-1/2
+    before:z-[1]
+    before:rounded-tr-[50%]
+    before:rounded-tl-[50%]
+
+}
