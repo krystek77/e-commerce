@@ -5,8 +5,9 @@
 body {
  display:flex;
  justify-content:center;
- align-items:start;
+ align-items:flex-start;
  height:100vh;
+ width:100wh;
  padding:16px;
 
 }
@@ -14,20 +15,22 @@ body {
 .flex-center {
     @apply justify-center items-center
 }
-.arc__red {
-    @apply 
-    before:block
-    before:content-[""]
-    before:w-[200%]
-    before:h-[35%]
-    before:bg-primary-light
-    before:bg-opacity-80
-    before:absolute
-    before:bottom-0
-    before:left-1/2
-    before:-translate-x-1/2
-    before:z-[1]
-    before:rounded-tr-[50%]
-    before:rounded-tl-[50%]
-
-}
+/** product card */
+.arc { @apply before:block before:content-[""] before:w-[200%] before:h-[35%] before:absolute before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:z-[1] before:rounded-tr-[50%] before:rounded-tl-[50%] }
+.product-card__primary .arc  { @apply before:bg-gradient-linear-primary before:bg-opacity-80  }
+.product-card__primary .product-card_compare { @apply bg-primary-light bg-opacity-80 }
+.product-card__accent .arc { @apply before:bg-accent-light before:bg-opacity-80 }
+.product-card__accent .product-card_compare { @apply bg-accent-light bg-opacity-80 }
+.product-card__black .arc { @apply  before:bg-opacity-80 before:bg-gradient-linear-black }
+.product-card__black .product-card_compare { @apply bg-black-light bg-opacity-80 }
+.product-card__green .arc { @apply before:bg-green-medium before:bg-opacity-80 }
+.product-card__green .product-card_compare { @apply bg-green-medium bg-opacity-80 }
+.product-card__gold .arc{ @apply before:bg-gold before:bg-opacity-80 }
+.product-card__gold .product-card_compare { @apply bg-gold bg-opacity-80 }
+/**
+.product-card__primary .product-card_details { @apply text-white }
+.product-card__accent .product-card_details { @apply text-black }
+.product-card__black .product-card_details { @apply text-white }
+.product-card__green .product-card_details { @apply text-black }
+.product-card__gold .product-card_details, { @apply text-black }
+*/

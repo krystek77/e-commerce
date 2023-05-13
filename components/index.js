@@ -3,3 +3,4 @@ export {default as Button} from './Buttons/Button';
 export {default as OutlineButton } from "./Buttons/OutlineButton";
 export {default as LabelCard} from "./ProductCard/LabelCard/LabelCard";
 export {default as Rating} from './Rating/Rating'
+export {default as GalleryCard} from './ProductCard/GalleryCard/GalleryCard'

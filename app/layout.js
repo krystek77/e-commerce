@@ -16,7 +16,7 @@ export default function RootLayout({children}) {
   return (
     <html className={montserrat.className} lang='pl'>
       <body>
-        <main>{children}</main>
+        <main className=''>{children}</main>
       </body>
     </html>
   );
