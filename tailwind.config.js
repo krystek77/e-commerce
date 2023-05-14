@@ -10,7 +10,10 @@ module.exports = {
     extend: {
       backgroundImage:()=>({
         'gradient-linear-black':'linear-gradient(to left, rgba(114,117,129,1) 15%, rgba(221,224,238,1) 100%)',
-        'gradient-linear-primary':'linear-gradient(to left, rgba(220,38,38,1) 15%, rgba(239,68,68,1) 100%)'
+        'gradient-linear-primary':'linear-gradient(to left, rgba(220,38,38,1) 15%, rgba(239,68,68,1) 100%)',
+        'gradient-linear-accent':'linear-gradient(to left, rgba(103,232,249,1) 15%, rgba(165,243,252,1) 100%)',
+        'gradient-linear-green':'linear-gradient(to left, rgba(77,139,49,1) 15%, rgba(193,225,166,1) 100%)',
+        'gradient-linear-gold':'linear-gradient(to left, rgba(255,156,0,1) 15%, rgba(255,200,0,1) 100%)',
       }),
       fontFamily: {
         html: ["var(--font-montserrat)"],

@@ -52,7 +52,7 @@ const ProductCard = ({color}) => {
             </div>
           </Link>
           <div className='product-card_compare relative w-full h-0 max-h-[200px] group-hover:h-auto transition-all duration-150 ease-in-out'>
-            <label className='px-4 py-2 flex justify-start items-center'>
+            <label className='relative px-4 py-2 flex justify-start items-center'>
               <input className='mr-2' type='checkbox' />
               <span className='text-xs'>Porównaj</span>
             </label>
