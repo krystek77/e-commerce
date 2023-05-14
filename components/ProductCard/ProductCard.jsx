@@ -4,9 +4,9 @@ import Link from "next/link";
 import Image from "next/image";
 import PropTypes from "prop-types";
 import { images } from "@public/assets/images";
-import { LabelCard, Rating, GalleryCard, LikeButton, SpecialOffer } from "@components";
+import { LabelCard, Rating, GalleryCard, LikeButton, SpecialOffer,Input } from "@components";
 
-const tmpImages = [1, 2,3,4,5,6,7,8,9,10];
+const tmpImages = [1,2,3,4,5,6,7,8,9,10];
 
 const ProductCard = ({ color }) => {
   const [isFavorite, setIsFavorite] = useState(false);
@@ -59,11 +59,7 @@ const ProductCard = ({ color }) => {
             <div className='product-card_details relative z-[2]'>
               <div className='mb-2 grid grid-cols-2'>
                 <SpecialOffer />
-                <div className="self-center justify-self-end">
-                  <div className='bg-green-medium border px-1 py-px border-green rounded-md max-w-[80px] text-green text-sm text-center font-semibold'>
-                    dostawa <span className='uppercase text-md font-bold'>gratis</span>
-                  </div>
-                </div>
+                <div className="self-center justify-self-end"> <div className='bg-green-medium border px-1 py-px border-green rounded-md max-w-[80px] text-green text-sm text-center font-semibold'> dostawa <span className='uppercase text-md font-bold'>gratis</span> </div> </div>
               </div>
               <div className='flex flex-col items-start justify-center'>
                 <span className='font-inter text-xl font-bold mb-2 text-black'>
@@ -76,10 +72,9 @@ const ProductCard = ({ color }) => {
             </div>
           </Link>
           <div className='product-card_compare relative w-full h-0 max-h-[200px] group-hover:h-auto transition-all duration-150 ease-in-out'>
-            <label className='relative px-4 py-2 flex justify-start items-center'>
-              <input className='mr-2' type='checkbox' />
-              <span className='text-xs'>Porównaj</span>
-            </label>
+            <div className="relative px-4 py-2">
+              <Input label="porównaj" color={color}/>
+            </div>
           </div>
         </div>
       </div>
