@@ -16,7 +16,7 @@ body {
     @apply justify-center items-center
 }
 /** product card */
-.arc { @apply before:block before:content-[""] before:w-[200%] before:h-[35%] before:absolute before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:z-[1] before:rounded-tr-[50%] before:rounded-tl-[50%] }
+.arc { @apply before:block before:content-[""] before:w-[200%] before:h-[203px] before:absolute before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:z-[1] before:rounded-tr-[50%] before:rounded-tl-[50%] }
 .product-card_compare {
     @apply 
     before:block 

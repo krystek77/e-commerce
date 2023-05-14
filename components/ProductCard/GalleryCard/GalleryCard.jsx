@@ -4,7 +4,7 @@ import {BsChevronBarDown ,BsChevronBarUp} from 'react-icons/bs'
 
 const GalleryCard = ({items}) => {
   return items.length > 1 ? (
-    <div className='absolute top-0 -left-4 -translate-x-full z-10 w-24 max-h-full rounded-md shadow-lg bg-white'>
+    <div className='absolute top-0 left-0 w-24 max-h-full rounded-md shadow-lg bg-white group-hover:-translate-x-28 group-hover:z-10 transition-transform duration-150'>
       <div className='h-full flex flex-col items-center px-1'>
         <button className='p-1 flex flex-center border w-full rounded-tr-md rounded-tl-md'>
           <BsChevronBarUp className='w-5 h-5' />
