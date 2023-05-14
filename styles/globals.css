@@ -41,3 +41,9 @@ body {
 .product-card__gold .arc{ @apply before:bg-gradient-linear-gold before:bg-opacity-80 }
 .product-card__gold .product-card_compare { @apply before:bg-gradient-linear-gold bg-opacity-80 }
 
+@layer utilities {
+    .clip-checkbox {
+        clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+        transform-origin:bottom left;
+    }
+}
