@@ -14,6 +14,8 @@ module.exports = {
         'gradient-linear-accent':'linear-gradient(to left, rgba(103,232,249,1) 15%, rgba(165,243,252,1) 100%)',
         'gradient-linear-green':'linear-gradient(to left, rgba(77,139,49,1) 15%, rgba(193,225,166,1) 100%)',
         'gradient-linear-gold':'linear-gradient(to left, rgba(255,156,0,1) 15%, rgba(255,200,0,1) 100%)',
+        'gradient-radial-hover-black':'radial-gradient(circle, rgba(221,224,238,0.1) 0%, rgba(114,117,129,0.1) 100%)',
+        'gradient-radial-hover-primary':'radial-gradient(circle, rgba(239,68,68,0.1) 0%, rgba(220,38,38,0.1) 100%)',
       }),
       fontFamily: {
         html: ["var(--font-montserrat)"],

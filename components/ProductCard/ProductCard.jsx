@@ -1,20 +1,35 @@
-import Link from 'next/link'
-import Image from 'next/image';
-import PropTypes from 'prop-types'
-import {images} from '@public/assets/images';
-import { LabelCard, Rating, GalleryCard } from "@components";
+'use client'
+import {useState} from 'react'
+import Link from "next/link";
+import Image from "next/image";
+import PropTypes from "prop-types";
+import { images } from "@public/assets/images";
+import { LabelCard, Rating, GalleryCard, LikeButton } from "@components";
 
-const tmpImages = [1,2]
+const tmpImages = [1, 2];
 
-const ProductCard = ({color}) => {
+const ProductCard = ({ color }) => {
+
+  const [isFavorite,setIsFavorite] = useState(false);
+  const handleFavorite = () => { setIsFavorite((prevIsFavorite)=>!prevIsFavorite) }
+
   let cardColor = "product-card__black";
-
   switch (color) {
-    case "primary": cardColor = "product-card__primary"; break;
-    case "accent": cardColor = "product-card__accent"; break;
-    case "green": cardColor = "product-card__green"; break;
-    case "gold": cardColor = "product-card__gold"; break;
-    default: cardColor="product-card__black"; break;
+    case "primary":
+      cardColor = "product-card__primary";
+      break;
+    case "accent":
+      cardColor = "product-card__accent";
+      break;
+    case "green":
+      cardColor = "product-card__green";
+      break;
+    case "gold":
+      cardColor = "product-card__gold";
+      break;
+    default:
+      cardColor = "product-card__black";
+      break;
   }
 
   return (
@@ -24,13 +39,14 @@ const ProductCard = ({color}) => {
         <div
           className={`product-card ${cardColor} group  overflow-hidden border border-black-light rounded-md  max-w-xs hover:max-h-[1000px]`}>
           <Link href='/' className='relative block p-4 arc'>
-            <div className='product-card_header flex justify-between items-start'>
+            <div className='product-card_header relative flex justify-between items-start'>
               <div className='flex flex-wrap flex-1 justify-start items-center'>
                 <LabelCard text='polecamy' />
                 {/* <LabelCard text="nowość"/> */}
                 <LabelCard text='okazja' />
               </div>
               <Rating />
+              <LikeButton isFavorite={isFavorite} handleFavorite={handleFavorite} />
             </div>
             <div className='product-card_image z-[0]'>
               <Image
@@ -61,10 +77,10 @@ const ProductCard = ({color}) => {
       </div>
     </div>
   );
-}
+};
 
 ProductCard.propTypes = {
   color: PropTypes.string,
 };
 
-export default ProductCard
+export default ProductCard;
