@@ -7,3 +7,4 @@ export {default as GalleryCard} from './ProductCard/GalleryCard/GalleryCard'
 export {default as LikeButton} from './LikeButton/LikeButton';
 export {default as SpecialOffer} from './SepcialOffer/SpecialOffer';
 export {default as Input} from './Input/Input'
+export {default as Menu } from './Menu/Menu'

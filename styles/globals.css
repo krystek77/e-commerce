@@ -4,12 +4,11 @@
 
 body {
  display:flex;
- justify-content:center;
+ flex-direction:column;
  align-items:flex-start;
  height:100vh;
- width:100wh;
- padding:16px;
-
+ width:100vw;
+ padding-top:16px;
 }
 
 .flex-center {
@@ -40,6 +39,27 @@ body {
 .product-card__green .product-card_compare { @apply before:bg-gradient-linear-green bg-opacity-80 }
 .product-card__gold .arc{ @apply before:bg-gradient-linear-gold before:bg-opacity-80 }
 .product-card__gold .product-card_compare { @apply before:bg-gradient-linear-gold bg-opacity-80 }
+
+/** menu */
+.triangle {
+    @apply
+    before:w-4
+    before:h-4
+    before:absolute
+    before:bottom-0
+    before:left-1/2
+    before:-translate-x-full
+    before:border-b-8
+    before:border-t-8
+    before:border-l-8
+    before:border-r-8
+    before:border-b-primary
+    before:border-l-transparent
+    before:border-r-transparent
+    before:border-t-transparent
+
+
+}
 
 @layer utilities {
     .clip-checkbox {
