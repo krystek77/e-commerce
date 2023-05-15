@@ -1,5 +1,5 @@
 import {Montserrat} from 'next/font/google'
-import {Menu} from '@components'
+import {Menu,Header} from '@components'
 import '@styles/globals.css';
 
 export const metadata = {
@@ -15,12 +15,11 @@ const montserrat = Montserrat({
 
 export default function RootLayout({children}) {
   return (
-    <html className={montserrat.className} lang='pl'>
+    <html className={montserrat.className} lang="pl">
       <body>
-        <div className="h-20 bg-black-light w-full"></div>
-        <div className="h-40 bg-white w-full"></div>
-        <Menu/>
-        <main className='w-full pt-[56px]'>{children}</main>
+        <Header />
+        <Menu />
+        <main className="w-full pt-[56px]">{children}</main>
       </body>
     </html>
   );
