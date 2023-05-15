@@ -25,7 +25,7 @@ const Menu = () => {
 
   return (
     <>
-    <nav className="md:hidden fixed z-[100] bg-white w-screen">
+    <nav className="md:hidden fixed top-0 left-0 z-[100] bg-white w-screen">
       <div className="px-4 py-2 flex justify-between items-center bg-black">
         <div className="text-white"><Link href="/">LOGO</Link></div>
         {isOpenMenu ? (
@@ -188,7 +188,7 @@ const Menu = () => {
         </div>
       ) : null}
     </nav>
-    <nav className="hidden md:block border-t border-b border-black-light w-full z-[100]">
+    <nav className="hidden md:block border-t border-b border-black-light w-full relative z-[100]">
       <ul className="text-black bg-white font-normal text-sm xl:text-base flex flex-center flex-wrap">
         <li className={`relative px-4 py-2 ${idSubmenu === "pralnice" && "triangle"}`} id="pralnice">
           <Link onPointerEnter={handleOpenSubmenu} onClick={handleCloseSubmenu} id="pralnice" className="whitespace-nowrap" href="/urzadzenia-pralnicze/pralnice">Pralnice</Link>
