@@ -10,7 +10,8 @@ const tmpImages = [1,2,3,4,5,6,7,8,9,10];
 
 const ProductCard = ({ color }) => {
   const [isFavorite, setIsFavorite] = useState(false);
-  const handleFavorite = () => {
+  const handleFavorite = (event) => {
+    event.preventDefault();
     setIsFavorite((prevIsFavorite) => !prevIsFavorite);
   };
 

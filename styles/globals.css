@@ -8,7 +8,6 @@ body {
  align-items:flex-start;
  height:100vh;
  width:100vw;
- padding-top:16px;
 }
 
 .flex-center {
@@ -43,13 +42,13 @@ body {
 /** menu */
 .triangle {
     @apply
-    before:w-4
-    before:h-4
+    before:w-0
+    before:h-0
     before:absolute
     before:bottom-0
     before:left-1/2
     before:-translate-x-full
-    before:border-b-8
+    before:border-b-4
     before:border-t-8
     before:border-l-8
     before:border-r-8
