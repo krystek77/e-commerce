@@ -1,27 +1,13 @@
-
-const data = [
-  {
-    _id: 1,
-    category: 'pralnice',
-    subcategory: 'pralnice-bębnowe-o-zaladunku-bocznym',
-    model: 'PBE-30',
-  },
-  {
-    _id: 2,
-    category: 'pralnice',
-    subcategory: 'pralnice-bębnowe-o-zaladunku-czolowym',
-    model: 'PCE-30A',
-  },
-];
+import {connectToDB,disconnectFromDB} from '@utils/db'
 
 export async function GET(request){
-    console.log(request.url)
-    const result = new URL(request.url)
-    console.log(result)
-    console.log(result.search)
-    console.log(result.searchParams)
-
-    const response = new Response(JSON.stringify(data),{status:200,headers:{'Content-Type':"application/json"}})
-    console.log(response)
+  try {
+    await connectToDB();
+    const response = new Response("GET ALL SPARE PARTS",{status:200})
     return response;
+  } catch (error) {
+    return new Response("Something went wrong",{status:500})
+  } finally {
+    await disconnectFromDB();
+  }
 }
