@@ -13,7 +13,8 @@ const montserrat = Montserrat({
   variable:"--font-montserrat"
 });
 
-export default function RootLayout({children}) {
+export default function RootLayout({children,params}) {
+  console.log(params)
   return (
     <html className={montserrat.className} lang="pl">
       <body>
