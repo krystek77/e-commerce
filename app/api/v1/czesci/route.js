@@ -1,4 +1,4 @@
-import {connectToDB,disconnectFromDB} from '@utils/db'
+import {connectToDB} from '@utils/db'
 
 export async function GET(request){
   try {
@@ -7,7 +7,5 @@ export async function GET(request){
     return response;
   } catch (error) {
     return new Response("Something went wrong",{status:500})
-  } finally {
-    await disconnectFromDB();
   }
 }
