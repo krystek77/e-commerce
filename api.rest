@@ -1,0 +1,11 @@
+
+### GET ALL SPARE PARTS
+
+http://localhost:5000/api/v1/czesci HTTP/1.1
+Content-Type: application/json
+
+
+### GET FILTERED SPARE PARTS
+
+http://localhost:5000/api/v1/czesci/1/2 HTTP/1.1
+Content-Type: application/json
