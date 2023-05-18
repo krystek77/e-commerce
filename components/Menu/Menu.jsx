@@ -4,7 +4,7 @@ import {useState} from 'react';
 import {BsChevronBarLeft ,BsChevronBarRight} from 'react-icons/bs';
 import {MdClose } from 'react-icons/md';
 import Link from 'next/link';
-import { Toolbar } from '@components';
+// import { Toolbar } from '@components';
 
 const Menu = () => {
   const [idSubmenu,setIdSubmenu] = useState("")
@@ -21,7 +21,7 @@ const Menu = () => {
 
   return (
     <div className="">
-      <Toolbar handleOpenMenu={handleOpenMenu}/>
+      {/* <Toolbar handleOpenMenu={handleOpenMenu}/> */}
       {isOpenMenu ? (
       <nav className="md:hidden w-screen fixed top-0 left-0 z-[100] h-screen overflow-y-scroll overflow-x-hidden bg-white">
         <div className="">
