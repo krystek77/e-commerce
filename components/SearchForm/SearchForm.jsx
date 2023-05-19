@@ -14,7 +14,7 @@ export default function SearchForm(){
           placeholder='Wyszukaj częśc zamienną po nazwie'
         />
         <button
-          className='absolute inset-y-0 right-4 rounded-tr-full px-4 font-inter text-md bg-gold rounded-br-full outline-none'
+          className='absolute inset-y-0 right-4 rounded-full px-4 font-inter text-md bg-gold outline-none'
           type='submit'>
           szukaj
         </button>

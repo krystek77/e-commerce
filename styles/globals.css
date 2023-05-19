@@ -34,7 +34,19 @@ body {
 .product-card__green .product-card_compare { @apply before:bg-gradient-linear-green bg-opacity-80 }
 .product-card__gold .arc{ @apply before:bg-gradient-linear-gold before:bg-opacity-80 }
 .product-card__gold .product-card_compare { @apply before:bg-gradient-linear-gold bg-opacity-80 }
+/** h1 */
+.head-title {
+    @apply
+    text-black
+    text-lg
+    font-accent
+    font-light
+    border-l-4
+    border-primary
+    pl-4
+    my-8
 
+}
 /** menu */
 .triangle {
     @apply

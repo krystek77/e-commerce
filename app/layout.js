@@ -1,26 +1,20 @@
-import {Montserrat} from 'next/font/google'
-import {Menu,Header} from '@components'
 import '@styles/globals.css';
+import {Advantages} from '@components'
 
 export const metadata = {
     title:"E-commerce",
     description:"Industrial Laundry Systems"
 }
 
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  display: "swap",
-  variable:"--font-montserrat"
-});
 
-export default function RootLayout({children,params}) {
-  console.log(params)
+
+export default function RootLayout({children}) {
+ 
   return (
-    <html className={montserrat.className} lang="pl">
+    <html lang="pl" className="font-html">
       <body>
-        <Header />
-        <Menu />
-        <main className="w-full pt-[56px]">{children}</main>
+        <Advantages />
+        {children}
       </body>
     </html>
   );

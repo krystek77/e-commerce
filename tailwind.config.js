@@ -18,8 +18,8 @@ module.exports = {
         'gradient-radial-hover-primary':'radial-gradient(circle, rgba(239,68,68,0.1) 0%, rgba(220,38,38,0.1) 100%)',
       }),
       fontFamily: {
-        html: ["var(--font-montserrat)"],
-        inter:["Inter","sans-serif"]
+        html: ["Montserrat","sans-serif"],
+        accent:["Inter","sans-serif"]
       },
       colors: {
         primary: {
