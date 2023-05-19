@@ -1,5 +1,5 @@
 import '@styles/globals.css';
-import {Advantages,Header} from '@components'
+import {Advantages,Header,Navigation} from '@components'
 
 export const metadata = {
     title:"E-commerce",
@@ -15,6 +15,7 @@ export default function RootLayout({children}) {
       <body>
         <Advantages />
         <Header/>
+        <Navigation/>
         {children}
       </body>
     </html>

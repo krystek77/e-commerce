@@ -2,12 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
 
-}
-
-.flex-center {
-    @apply justify-center items-center
+@layer utilities {
+    .flex-center {
+        @apply justify-center items-center
+    }
+    .hover-element {
+        @apply 
+        hover:text-black-medium
+    }
+    .active-navigation {
+        @apply
+        bg-black
+        text-white
+        shadow-lg
+        origin-bottom
+        scale-y-110
+        outline-none
+    }
+    .focus-element {
+        @apply
+        focus:outline
+        focus:outline-2
+        focus:outline-offset-0
+        focus:outline-black
+    }
+    .transition-element {
+        @apply
+        transition-all
+        duration-150
+        ease-in-out
+    }
 }
 /** product card */
 .arc { @apply before:block before:content-[""] before:w-[200%] before:h-[203px] before:absolute before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:z-[1] before:rounded-tr-[50%] before:rounded-tl-[50%] }

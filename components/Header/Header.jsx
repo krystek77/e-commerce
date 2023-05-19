@@ -52,10 +52,6 @@ const Header = () => {
             <SearchForm />
           </div>
         </div>
-        {/** navigation */}
-        <nav className="text-center border-t border-slate-100 py-4">
-          NAVIGATION
-        </nav>
       </div>
     </header>
   );

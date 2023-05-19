@@ -9,7 +9,7 @@ export default function SearchForm(){
           <BsSearch className='w-4 h-4 text-black'/>
         </div>
         <input
-          className='border border-black-light rounded-full text-md shadow-sm outline-none w-full py-2 pl-12 pr-20 focus:outline focus:outline-2 focus:outline-offset-0 focus:outline-black'
+          className='border border-black-light rounded-full text-md shadow-sm outline-none w-full py-2 pl-12 pr-20 focus-element'
           type='search'
           placeholder='Wyszukaj częśc zamienną po nazwie'
         />
