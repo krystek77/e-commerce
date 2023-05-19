@@ -8,6 +8,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      gridTemplateColumns:{
+        "300/fr":"300px 1fr"
+      },
       backgroundImage:()=>({
         'gradient-linear-black':'linear-gradient(to left, rgba(114,117,129,1) 15%, rgba(221,224,238,1) 100%)',
         'gradient-linear-primary':'linear-gradient(to left, rgba(220,38,38,1) 15%, rgba(239,68,68,1) 100%)',
