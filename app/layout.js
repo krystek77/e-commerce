@@ -1,5 +1,5 @@
 import '@styles/globals.css';
-import {Advantages} from '@components'
+import {Advantages,Header} from '@components'
 
 export const metadata = {
     title:"E-commerce",
@@ -11,9 +11,10 @@ export const metadata = {
 export default function RootLayout({children}) {
  
   return (
-    <html lang="pl" className="font-html">
+    <html lang="pl" className="font-html text-black">
       <body>
         <Advantages />
+        <Header/>
         {children}
       </body>
     </html>
