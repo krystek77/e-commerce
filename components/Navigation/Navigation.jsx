@@ -6,7 +6,7 @@ import Links from '@utils/navigation';
 
 const Navigation = () => {
 const segment = useSelectedLayoutSegment();
-console.log(segment)
+
   return (
     <nav className="">
       <ul className={`container mx-auto border-t border-slate-100 flex justify-center items-center`}>
