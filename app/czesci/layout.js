@@ -6,9 +6,9 @@ export const metadata = {
 export default function SparePartsLayout({children}) {
  
   return (
-    <section className="border-t border-b border-slate-100">
+    <section className="">
       <div className="container mx-auto grid grid-cols-300/fr">
-        <h2 className="col-span-2 border">.....</h2>
+        <h2 className="col-span-2">.....</h2>
         <aside className="border">FILTERS</aside>
         <main className="border">{children}</main>
       </div>

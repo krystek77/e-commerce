@@ -4,7 +4,7 @@ const SpareParts = () => {
   return (
 
     <div className="container mx-auto">
-      <h3 className="head-title">Spare Part Page</h3>
+      <h1 className="">Spare Part Page</h1>
     </div>
 
   )

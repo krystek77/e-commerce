@@ -5,7 +5,7 @@ const Equipment = props => {
   return (
 
     <div className="container mx-auto">
-      <h3 className="head-title">Laundry Equipment Page</h3>
+      <h1 className="">Laundry Equipment Page</h1>
     </div>
 
   )

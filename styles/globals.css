@@ -2,7 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-
+@layer base {
+    h1 { @apply text-black text-lg font-accent font-medium border-l-4 border-primary pl-4 my-8 uppercase }
+    h3 { @apply text-black text-base font-accent font-medium border-l-4 border-gold pl-4 my-4 uppercase }
+}
 @layer utilities {
     .flex-center {
         @apply justify-center items-center
@@ -33,6 +36,10 @@
         duration-150
         ease-in-out
     }
+    .clip-checkbox {
+        clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+        transform-origin:bottom left;
+    }
 }
 /** product card */
 .arc { @apply before:block before:content-[""] before:w-[200%] before:h-[203px] before:absolute before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:z-[1] before:rounded-tr-[50%] before:rounded-tl-[50%] }
@@ -59,19 +66,7 @@
 .product-card__green .product-card_compare { @apply before:bg-gradient-linear-green bg-opacity-80 }
 .product-card__gold .arc{ @apply before:bg-gradient-linear-gold before:bg-opacity-80 }
 .product-card__gold .product-card_compare { @apply before:bg-gradient-linear-gold bg-opacity-80 }
-/** h1 */
-.head-title {
-    @apply
-    text-black
-    text-lg
-    font-accent
-    font-light
-    border-l-4
-    border-gold
-    pl-4
-    my-8
-    uppercase
-}
+
 /** menu */
 .triangle {
     @apply
@@ -91,11 +86,4 @@
     before:border-t-transparent
 
 
-}
-
-@layer utilities {
-    .clip-checkbox {
-        clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
-        transform-origin:bottom left;
-    }
 }
