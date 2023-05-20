@@ -5,6 +5,7 @@
 @layer base {
     h1 { @apply text-black text-lg font-accent font-medium border-l-4 border-primary pl-4 my-8 uppercase }
     h3 { @apply text-black text-base font-accent font-medium border-l-4 border-gold pl-4 my-4 uppercase }
+    p {@apply text-black text-lg font-light}
 }
 @layer utilities {
     .flex-center {

@@ -27,7 +27,7 @@ const Header = () => {
               />
             </Link>
           </div>
-          <div className='hidden md:block flex-1'>
+          <div className='hidden lg:block flex-1'>
             <SearchForm />
           </div>
           <div className="flex items-center flex-1 justify-end">
@@ -48,7 +48,7 @@ const Header = () => {
               </p>
             </div>
           </div>
-          <div className='md:hidden w-full mt-4 md:mt-0'>
+          <div className='lg:hidden w-full mt-4 lg:mt-0'>
             <SearchForm />
           </div>
         </div>
