@@ -5,6 +5,5 @@ const data = [
     {_id:4,url:'warsztat',label:'Warsztat'},
     {_id:5,url:'nowosci',label:'Nowości'},
     {_id:6,url:'okazje',label:'Okazje'},
-    {_id:7,url:'polecane',label:'Polecane'},
 ]
 export default data;

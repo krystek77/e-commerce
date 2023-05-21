@@ -26,12 +26,12 @@ const handleCloseSubmenu = (event) => {
           ))}
         </ul>
         {/** subnavigation */}
-        <section className={index!=="" ? 'absolute top-full left-0 bg-slate-50 w-full h-auto transition-element':'absolute top-full left-0 bg-slate-50 w-full h-0 max-h-[1000px] overflow-hidden transition-element'}>
+        <section className={index!=="" ? 'absolute top-full left-0 w-full h-auto transition-element mt-4':'absolute top-full left-0 w-full h-0 max-h-[1000px] overflow-hidden transition-element'}>
           {/** urzadzenia-pralnicze */}
-          {index === "1" ? <div onPointerLeave={handleCloseSubmenu} className="container mx-auto px-4 py-8">
+          {index === "1" ? <div onPointerLeave={handleCloseSubmenu} className="container mx-auto px-4 py-8 bg-white shadow-lg rounded-md border border-black-light">
             <div className='grid grid-cols-4 gap-4'>
               {/** pralnice */}
-              <div className='border p-4'>
+              <div className='border p-4 rounded-md border-black-light bg-slate-50'>
                 <Link href=""><h3 className=''>Pralnice</h3></Link>
                 <div className='flex flex-col justify-center items-start'>
                   <Link href="" className='block py-1 font-light text-base'>pralnice bębnowe o załadunku czołowym</Link>
@@ -41,7 +41,7 @@ const handleCloseSubmenu = (event) => {
                 </div>
               </div>
               {/** pralnicowirówki */}
-              <div className='border col-span-2 p-4'>
+              <div className='border col-span-2 p-4 rounded-md border-black-light bg-slate-50'>
                 <Link href=""><h3 className=''>Pralnicowirówki</h3></Link>
                 <div className='flex flex-col justify-center items-start'>
                   <Link href="" className='block py-1 font-light text-base'>pralnicowirówki normalnoobrotowe</Link>
@@ -52,7 +52,7 @@ const handleCloseSubmenu = (event) => {
                 </div>
               </div>
               {/** Prasownice */}
-              <div className='border p-4'>
+              <div className='border p-4 rounded-md border-black-light bg-slate-50'>
                 <Link href=""><h3 className=''>Prasownice</h3></Link>
                 <div className='flex flex-col justify-center items-start'>
                   <Link href="" className='block py-1 font-light text-base'>prasownice nieckowe</Link>
@@ -64,9 +64,9 @@ const handleCloseSubmenu = (event) => {
                 </div>
               </div>
               {/** empty */}
-              <div className='border p-4'></div>
+              <div className='border p-4 rounded-md border-black-light bg-slate-50'></div>
               {/** Suszarki */}
-              <div className='border col-span-3 p-4'>
+              <div className='border col-span-3 p-4 rounded-md border-black-light bg-slate-50'>
                 <Link href=""><h3 className=''>Suszarki</h3></Link>
                 <div className='flex flex-col justify-center items-start'>
                   <Link href="" className='block py-1 font-light text-base'>suszarki bębnowe</Link>
@@ -75,12 +75,12 @@ const handleCloseSubmenu = (event) => {
                 </div>
               </div>
               {/** wirówki */}
-              <div className='border p-4'>
+              <div className='border p-4 rounded-md border-black-light bg-slate-50'>
                 <Link href=""><h3 className=''>Wirówki</h3></Link>
               </div>
               {/** Bariery higieny */}
-              <div className='border'>
-              <Link href=""><h3 className=''>Bariery higieny</h3></Link>
+              <div className='border p-4 rounded-md border-black-light bg-slate-50'>
+                <Link href=""><h3 className=''>Bariery higieny</h3></Link>
                 <div className='flex flex-col justify-center items-start'>
                   <Link href="" className='block py-1 font-light text-base'>pralnicowirówki normalnoobrotowe</Link>
                   <Link href="" className='block py-1 font-light text-base'>pralnicowirówki wysokoobrotowe</Link>
@@ -88,7 +88,7 @@ const handleCloseSubmenu = (event) => {
                 </div>
               </div>
               {/** wózki i regały */}
-              <div className='border col-span-2 p-4'>
+              <div className='border col-span-2 p-4 rounded-md border-black-light bg-slate-50'>
                 <Link href=""><h3 className=''>Wózki i Regały</h3></Link>
                 <div className='flex flex-col justify-center items-start'>
                   <Link href="" className='block py-1 font-light text-base'>wózki na suche bądź brudne pranie</Link>
@@ -99,45 +99,45 @@ const handleCloseSubmenu = (event) => {
                 </div>
               </div>
               {/** małe profesjonalne pralnicowirówki */}
-              <div className='border p-4'>
+              <div className='border p-4 rounded-md border-black-light bg-slate-50'>
                 <Link href="urzadzenia-pralnicze/male-profesjonalne-pralnicowirowki">
                   <h3 className=''>Małe, <b>profesjonalne pralnicowirówki</b>, idealne do apartamentów, akademików, domów opiekuńczzych ...</h3>
                 </Link>
                 <p>Pralnicowirówki dostępne z dopasowaną suszarką, tworzą idealny zestaw do niewielkiej pralni przemysłowej.</p>
               </div>
               {/** małe profesjonalne suszarki */}
-              <div className='border p-4'>
+              <div className='border p-4  rounded-md border-black-light bg-slate-50'>
                 <Link href="urzadzenia-pralnicze/male-profesjonalne-suszarki">
                   <h3 className=''>Małe, <b>profesjonalne suszarki</b>, idealne do apartamentów, akademików, domów opiekuńczzych ...</h3>
                 </Link>
                 <p>Suszarki dostępne z dopasowaną pralnicowirówką, tworzą idealny zestaw do niewielkiej pralni przemysłowej.</p>
               </div>
               {/** zestaw pralnicowirówka - suszark */}
-              <div className='border p-4'>
+              <div className='border p-4  rounded-md border-black-light bg-slate-50'>
                 <Link href="urzadzenia-pralnicze/male-profesjonalne-zestawy-pralnicowirowka-suszarka">
                   <h3 className=''>Małe, <b>profesjonalne zestawy</b>, idealne do obiektów o małej powierzchni pralni użytkowej. </h3>
                 </Link>
                 <p>Zestaw składający się z pralnicowirówki i dopasowanej, ustawianej na pralnicowirówce, suszarce bębnowej</p>
               </div>    
               {/** zestaw suszarka - suszark */}
-              <div className='border p-4'>
+              <div className='border p-4  rounded-md border-black-light bg-slate-50'>
                 <Link href="urzadzenia-pralnicze/male-profesjonalne-zestawy-suszarko-suszarka">
                   <h3 className=''>Małe, <b>profesjonalne zestawy</b>, idealne do obiektów o małej powierzchni pralni użytkowej. </h3>
                 </Link>
                 <p>Zestaw składający się z 2 suszarke bębnowych, tworzących słupek pralniczy</p>
               </div>
               {/** prasowanie fasonowe */}
-              <div className='border col-span-4 py-4'>
+              <div className='border col-span-4 py-4  rounded-md border-black-light bg-slate-50'>
                 <Link href=""><h3 className=''>Prasowanie fasonowe</h3></Link>
               </div>
 
             </div>
           </div> : null}
           {/** urzadzenia-pralnicze-samoobslugowe */}
-          {index === "2" ? <div onPointerLeave={handleCloseSubmenu} className="container mx-auto px-4 py-8">
+          {index === "2" ? <div onPointerLeave={handleCloseSubmenu} className="container mx-auto px-4 py-8 bg-white shadow-lg rounded-md border border-black-light">
             <div className='grid grid-cols-3 gap-4'>
               {/** Pralnicowirówki samoobsługowe */}
-              <div className='border p-4'>
+              <div className='border p-4 rounded-md border-accent-dark bg-accent-light bg-opacity-25'>
                 <Link href="urzadzenia-pralnicze-samoobslugowe/pralnicowirowki"><h3 className=''>Pralnicowirówki</h3></Link>
                 <div className='flex flex-col justify-center items-start'>
                   <Link href="" className='block py-1 font-light text-base'>pralnicowirówki normalnoobrotowe</Link>
@@ -146,36 +146,36 @@ const handleCloseSubmenu = (event) => {
                 </div>
               </div>
               {/** Suszarki samoobsługowe */}
-              <div className='border  p-4'>
+              <div className='border  p-4 rounded-md border-accent-dark bg-accent-light bg-opacity-25'>
                 <Link href="urzadzenia-pralnicze-samoobslugowe/suszarki"><h3 className=''>Suszarki</h3></Link>
               </div>
               {/** Małe profesjonalne zestawy samoobsługowe pralnicowirówka - suszarka */}
-              <div className='border p-4'>
+              <div className='border p-4 rounded-md border-accent-dark bg-accent-light bg-opacity-25'>
                 <Link href="urzadzenia-pralnicze-samoobslugowe/male-profesjonalne-zestawy-pralko-suszarka">
                   <h3 className=''>Małe, <b>profesjonalne zestawy samoobsługowe</b>, idealne do obiektów o małej powierzchni pralni użytkowej. </h3>
                 </Link>
                 <p>Zestaw samoobsługowy składający się z pralnicowirówki i dopasowanej do niej, ustawianej na pralnicowirówce, suszarce bębnowej.</p>
               </div>
               {/** Prasownice walcowe */}
-              <div className='border  p-4'>
+              <div className='border  p-4 rounded-md border-accent-dark bg-accent-light bg-opacity-25'>
                 <Link href="urzadzenia-pralnicze-samoobslugowe/prasownice-walcowe"><h3 className=''>Prasownice walcowe</h3></Link>
               </div>
               {/** Małe profesjonalne pralnicowirówki samoobsługowe */}
-              <div className='border p-4'>
+              <div className='border p-4 rounded-md border-accent-dark bg-accent-light bg-opacity-25'>
                 <Link href="urzadzenia-pralnicze-samoobslugowe/male-profesjonalne-pralnicowirowki">
                   <h3 className=''>Małe, <b>profesjonalne pralnicowirówki samoobsługowe</b>, idealne do apartamentów, akademików, domów opiekuńczzych ...</h3>
                 </Link>
                 <p>Pralnicowirówki dostępne z dopasowaną suszarką, tworzą idealny zestaw do pralni samoobsługowej.</p>
               </div>
               {/** Małe profesjonalne suszarki samoobsługowe */}
-              <div className='border p-4'>
+              <div className='border p-4 rounded-md border-accent-dark bg-accent-light bg-opacity-25'>
                 <Link href="urzadzenia-pralnicze-samoobslugowe/male-profesjonalne-suszarki">
                   <h3 className=''>Małe, <b>profesjonalne suszarki samoobsługowe</b>, idealne do apartamentów, akademików, domów opiekuńczzych ...</h3>
                 </Link>
                 <p>Suszarki dostępne z dopasowaną pralnicowirówką, tworzą idealny zestaw do pralni samoobsługowej.</p>
               </div>
               {/** Małe profesjonalne zestawy samoobsługowe suszarka - suszarka */}
-              <div className='border p-4'>
+              <div className='border p-4 rounded-md border-accent-dark bg-accent-light bg-opacity-25'>
                 <Link href="urzadzenia-pralnicze-samoobslugowe/male-profesjonalne-zestawy-suszarko-suszarka">
                   <h3 className=''>Małe, <b>profesjonalne zestawy samoobsługowe</b>, idealne do obiektów o małej powierzchni pralni użytkowej. </h3>
                 </Link>
