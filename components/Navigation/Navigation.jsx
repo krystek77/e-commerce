@@ -85,7 +85,7 @@ const handleBackToMenu = (event) => { event.stopPropagation(); setId(""); }
         </nav>
       ) : null}
       {/** large devices navigation */}
-      <nav className="relative border-b border-slate-100 hidden lg:block">
+      <nav className="relative border-b border-slate-100 hidden lg:block z-[100]">
         <ul
           className={`container mx-auto border-t border-slate-100 flex justify-center items-center relative z-10`}
         >

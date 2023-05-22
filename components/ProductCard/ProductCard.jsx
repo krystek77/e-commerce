@@ -35,6 +35,8 @@ const ProductCard = ({ color }) => {
   }
 
   return (
+    <div className="p-4">
+      
     <div className='relative group bg-white max-w-[320px]'>
       <GalleryCard items={tmpImages} />
       <div className='relative bg-white shadow-lg hover:scale-105 transition-transform duration-150'>
@@ -79,6 +81,7 @@ const ProductCard = ({ color }) => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };
