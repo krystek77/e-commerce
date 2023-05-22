@@ -8,7 +8,7 @@ const data = [
         { _id: 2, url: 'pralnicowirowki', label: 'Pralnicowirowki' },
         { _id: 3, url: 'prasownice', label: 'Prasownice' },
         { _id: 4, url: 'suszarki', label: 'Suszarki' },
-        { _id: 5, url: 'wirowki', label: 'wirowki' },
+        { _id: 5, url: 'wirowki', label: 'Wirowki' },
         { _id: 6, url: 'bariery-higieny', label: 'Bariery Higieny' },
         { _id: 7, url: 'male-profesjonalne-pralnicowirowki', label: 'Małe profesjonalne pralnicowirówki' },
         { _id: 8, url: 'male-profesjonalne-suszarki', label: 'Małe profesjonalne suszarki' },

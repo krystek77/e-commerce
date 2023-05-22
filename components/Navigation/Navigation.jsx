@@ -1,28 +1,35 @@
-'use client';
-import {useState} from 'react'
-import Link from 'next/link';
-import { useSelectedLayoutSegments } from 'next/navigation';
-import Links from '@utils/navigation';
+"use client";
+import { useState } from "react";
+import Link from "next/link";
+import { useSelectedLayoutSegments } from "next/navigation";
+import Links from "@utils/data";
 import { images } from "@public/assets/images";
-import {BsChevronBarLeft} from '@react-icons/all-files/bs/BsChevronBarLeft';
-import {BsChevronBarRight} from '@react-icons/all-files/bs/BsChevronBarRight';
-import {MdClose } from '@react-icons/all-files/md/MdClose';
-import Image from 'next/image';
+import { BsChevronBarLeft } from "@react-icons/all-files/bs/BsChevronBarLeft";
+import { BsChevronBarRight } from "@react-icons/all-files/bs/BsChevronBarRight";
+import { MdClose } from "@react-icons/all-files/md/MdClose";
+import Image from "next/image";
 
-const Navigation = ({isOpenNavigation,handleCloseNavigation}) => {
-const [index,setIndex] = useState("");
-const [id,setId] = useState("");
-const segments = useSelectedLayoutSegments();
+const Navigation = ({ isOpenNavigation, handleCloseNavigation }) => {
+  const [index, setIndex] = useState("");
+  const [id, setId] = useState("");
+  const segments = useSelectedLayoutSegments();
 
-const handleOpenSubmenu = (event) => { setIndex(event.currentTarget.id); };
-const handleCloseSubmenu = (event) => {
-  if (event.currentTarget.id) {
-    const DOMRectLink = event.currentTarget.getBoundingClientRect();
-    if (event.clientY < DOMRectLink.bottom) setIndex("");
-  } else setIndex("");
-};
-const handleOpenSmallDevicesSubnavigation = (event) => { setId(event.currentTarget.id) }
-const handleBackToMenu = (event) => { event.stopPropagation(); setId(""); }
+  const handleOpenSubmenu = (event) => {
+    setIndex(event.currentTarget.id);
+  };
+  const handleCloseSubmenu = (event) => {
+    if (event.currentTarget.id) {
+      const DOMRectLink = event.currentTarget.getBoundingClientRect();
+      if (event.clientY < DOMRectLink.bottom) setIndex("");
+    } else setIndex("");
+  };
+  const handleOpenSmallDevicesSubnavigation = (event) => {
+    setId(event.currentTarget.id);
+  };
+  const handleBackToMenu = (event) => {
+    event.stopPropagation();
+    setId("");
+  };
 
   return (
     <>
@@ -48,12 +55,25 @@ const handleBackToMenu = (event) => { event.stopPropagation(); setId(""); }
               </button>
             </div>
             {/** navigation */}
-            <ul className='px-8'>
+            <ul className="px-8">
               {Links.map((item) => (
-                <li key={item._id} onClick={handleOpenSmallDevicesSubnavigation} id={item.label} className='flex justify-between items-center py-2 border-b border-black-light' >
+                <li
+                  key={item._id}
+                  onClick={handleOpenSmallDevicesSubnavigation}
+                  id={item.label}
+                  className="flex justify-between items-center py-2 border-b border-black-light"
+                >
                   <span>{item.label}</span>
-                  <span><BsChevronBarRight/></span>
-                  <div className={id===item.label ? 'px-8 absolute top-[81px] left-0 w-screen h-[calc(100vh_-_81px)] bg-white transition-element':'px-8 absolute translate-x-full top-[81px] w-screen h-[calc(100vh_-_81px)] bg-white transition-element'}>
+                  <span>
+                    <BsChevronBarRight />
+                  </span>
+                  <div
+                    className={
+                      id === item.label
+                        ? "px-8 absolute top-[81px] left-0 w-screen h-[calc(100vh_-_81px)] bg-white transition-element"
+                        : "px-8 absolute translate-x-full top-[81px] w-screen h-[calc(100vh_-_81px)] bg-white transition-element"
+                    }
+                  >
                     <ul className="px-4">
                       {/** back */}
                       <li
@@ -69,13 +89,28 @@ const handleBackToMenu = (event) => { event.stopPropagation(); setId(""); }
                       {/**  */}
                       <li className="flex justify-start items-center py-2 border-b border-black-light">
                         <Link onClick={handleCloseNavigation} href={item.url}>
-                          <b className="mr-2">Wszystkie:</b>{item.label.toLowerCase()}
+                          <b className="mr-2">Wszystkie:</b>
+                          {item.label.toLowerCase()}
                         </Link>
                       </li>
 
-                      {item.categories.length ? item.categories.map((cat,index)=>(<li onClick={handleCloseNavigation} className={index === item.categories.length-1 ?'py-2':'py-2 border-b border-black-light'} key={`${item._id}-${cat._id}`}>
-                        <Link href={`${item.url}/${cat.url}`}>{cat.label}</Link>
-                      </li>)):null}
+                      {item.categories.length
+                        ? item.categories.map((cat, index) => (
+                            <li
+                              onClick={handleCloseNavigation}
+                              className={
+                                index === item.categories.length - 1
+                                  ? "py-2"
+                                  : "py-2 border-b border-black-light"
+                              }
+                              key={`${item._id}-${cat._id}`}
+                            >
+                              <Link href={`${item.url}/${cat.url}`}>
+                                {cat.label}
+                              </Link>
+                            </li>
+                          ))
+                        : null}
                     </ul>
                   </div>
                 </li>
@@ -99,13 +134,13 @@ const handleBackToMenu = (event) => { event.stopPropagation(); setId(""); }
               <Link
                 className={`py-4 px-4 mx-2 block font-accent font-bold uppercase rounded-tr-md rounded-tl-md transition-element hover-element ${
                   segments[1] === item.url
-                    ? 'active-navigation'
-                    : 'focus-element'
+                    ? "active-navigation"
+                    : "focus-element"
                 } `}
                 href={item.url}
               >
-                {' '}
-                {item.label}{' '}
+                {" "}
+                {item.label}{" "}
               </Link>
             </li>
           ))}
@@ -114,13 +149,13 @@ const handleBackToMenu = (event) => { event.stopPropagation(); setId(""); }
         <section
           onClick={handleCloseSubmenu}
           className={
-            index !== ''
-              ? 'absolute top-full left-0 w-full h-auto transition-element mt-4'
-              : 'absolute top-full left-0 w-full h-0 max-h-[1000px] overflow-hidden transition-element'
+            index !== ""
+              ? "absolute top-full left-0 w-full h-auto transition-element mt-4"
+              : "absolute top-full left-0 w-full h-0 max-h-[1000px] overflow-hidden transition-element"
           }
         >
           {/** urzadzenia-pralnicze */}
-          {index === '1' ? (
+          {index === "1" ? (
             <div
               onPointerLeave={handleCloseSubmenu}
               className="container mx-auto px-4 py-8 bg-white shadow-lg rounded-md border border-black-light"
@@ -304,7 +339,7 @@ const handleBackToMenu = (event) => { event.stopPropagation(); setId(""); }
                   <Link href="urzadzenia-pralnicze/male-profesjonalne-zestawy-pralnicowirowka-suszarka">
                     <h3 className="">
                       Małe, <b>profesjonalne zestawy</b>, idealne do obiektów o
-                      małej powierzchni pralni użytkowej.{' '}
+                      małej powierzchni pralni użytkowej.{" "}
                     </h3>
                   </Link>
                   <p>
@@ -317,7 +352,7 @@ const handleBackToMenu = (event) => { event.stopPropagation(); setId(""); }
                   <Link href="urzadzenia-pralnicze/male-profesjonalne-zestawy-suszarko-suszarka">
                     <h3 className="">
                       Małe, <b>profesjonalne zestawy</b>, idealne do obiektów o
-                      małej powierzchni pralni użytkowej.{' '}
+                      małej powierzchni pralni użytkowej.{" "}
                     </h3>
                   </Link>
                   <p>
@@ -335,7 +370,7 @@ const handleBackToMenu = (event) => { event.stopPropagation(); setId(""); }
             </div>
           ) : null}
           {/** urzadzenia-pralnicze-samoobslugowe */}
-          {index === '2' ? (
+          {index === "2" ? (
             <div
               onPointerLeave={handleCloseSubmenu}
               className="container mx-auto px-4 py-8 bg-white shadow-lg rounded-md border border-black-light"
@@ -369,7 +404,7 @@ const handleBackToMenu = (event) => { event.stopPropagation(); setId(""); }
                   <Link href="urzadzenia-pralnicze-samoobslugowe/male-profesjonalne-zestawy-pralko-suszarka">
                     <h3 className="">
                       Małe, <b>profesjonalne zestawy samoobsługowe</b>, idealne
-                      do obiektów o małej powierzchni pralni użytkowej.{' '}
+                      do obiektów o małej powierzchni pralni użytkowej.{" "}
                     </h3>
                   </Link>
                   <p>
@@ -416,7 +451,7 @@ const handleBackToMenu = (event) => { event.stopPropagation(); setId(""); }
                   <Link href="urzadzenia-pralnicze-samoobslugowe/male-profesjonalne-zestawy-suszarko-suszarka">
                     <h3 className="">
                       Małe, <b>profesjonalne zestawy samoobsługowe</b>, idealne
-                      do obiektów o małej powierzchni pralni użytkowej.{' '}
+                      do obiektów o małej powierzchni pralni użytkowej.{" "}
                     </h3>
                   </Link>
                   <p>

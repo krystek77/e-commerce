@@ -1,16 +1,10 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react";
+import PropTypes from "prop-types";
 
-const Equipment = props => {
-  return (
+const Equipment = (props) => {
+  return <h3 className="">Urządzenia</h3>;        
+};
 
-    <div className="container mx-auto">
-      <h1 className="">Laundry Equipment Page</h1>
-    </div>
+Equipment.propTypes = {};
 
-  )
-}
-
-Equipment.propTypes = {}
-
-export default Equipment
+export default Equipment;

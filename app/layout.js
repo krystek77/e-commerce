@@ -15,14 +15,6 @@ export default function RootLayout({children}) {
         <Advantages />
         <Header />
         {children}
-        <div className='container mx-auto flex py-8 border justify-center flex-wrap'>
-          <ProductCard color="gold"/>
-          <ProductCard color="primary"/>
-          <ProductCard color="accent"/>
-          <ProductCard color="accent"/>
-          <ProductCard color="green"/>
-          <ProductCard color="green"/>
-        </div>
       </body>
     </html>
   );
