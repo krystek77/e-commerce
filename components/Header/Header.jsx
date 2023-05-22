@@ -10,14 +10,8 @@ import {MdShoppingCart} from '@react-icons/all-files/md/MdShoppingCart';
 
 const Header = () => {
   const [isOpenNavigation,setIsOpenNavigation] = useState(false);
-  const handleOpenNavigation = ()=> {
-    console.log("open menu");
-    setIsOpenNavigation(true);
-  }
-  const handleCloseNavigation =() => {
-    console.log("close menu")
-    setIsOpenNavigation(false)
-  }
+  const handleOpenNavigation = ()=> { setIsOpenNavigation(true); }
+  const handleCloseNavigation =() => { setIsOpenNavigation(false) }
   return (
     <>
       <header className="py-8 lg:px-0">

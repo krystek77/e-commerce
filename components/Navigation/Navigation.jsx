@@ -21,17 +21,8 @@ const handleCloseSubmenu = (event) => {
     if (event.clientY < DOMRectLink.bottom) setIndex("");
   } else setIndex("");
 };
-
-const handleOpenSmallDevicesSubnavigation = (event) => {
-  console.log(event.currentTarget.id)
-  console.log()
-  setId(event.currentTarget.id)
-}
-
-const handleBackToMenu = (event) => {
-  event.stopPropagation();
-  setId("");
-}
+const handleOpenSmallDevicesSubnavigation = (event) => { setId(event.currentTarget.id) }
+const handleBackToMenu = (event) => { event.stopPropagation(); setId(""); }
 
   return (
     <>
