@@ -1,9 +1,10 @@
+
 export const metadata = {
-    title:"E-commerce - części zamienne do przemysłowych urządzeń pralniczych",
-    description:"Industrial Laundry Systems - części zamienne do wszystkich przemysłowych urządzeń pralniczych"
+    title:"E-commerce - wyposażenie pralni przemysłowej",
+    description:"Industrial Laundry Systems - przemysłowe pralki, pralnicowirówki, suszarki bębnowe"
 }
 
-export default function SparePartsLayout({children}) {
+export default function EquipmentLayout({children}) {
  
   return (
     <section className="">

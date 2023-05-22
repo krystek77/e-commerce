@@ -1,12 +1,12 @@
 'use client';
 import {useState} from 'react'
 import Link from 'next/link';
-import { useSelectedLayoutSegment } from 'next/navigation';
+import { useSelectedLayoutSegments } from 'next/navigation';
 import Links from '@utils/navigation';
 
 const Navigation = () => {
-const segment = useSelectedLayoutSegment();
-const [index,setIndex] = useState("")
+const segments = useSelectedLayoutSegments();
+const [index,setIndex] = useState("");
 
 const handleOpenSubmenu = (event) => { setIndex(event.currentTarget.id); };
 const handleCloseSubmenu = (event) => {
@@ -16,17 +16,18 @@ const handleCloseSubmenu = (event) => {
   } else setIndex("");
 };
 
+
   return (
       <nav className='relative border-b border-slate-100 hidden lg:block'>
         <ul className={`container mx-auto border-t border-slate-100 flex justify-center items-center relative z-10`}>
           {Links.map((item) => (
             <li key={item._id} onPointerEnter={handleOpenSubmenu} onPointerLeave={handleCloseSubmenu} id={item._id}>
-              <Link className={`py-4 px-4 mx-2 block font-accent font-bold uppercase rounded-tr-md rounded-tl-md transition-element hover-element ${ segment === item.url ? "active-navigation" : "focus-element" } `} href={item.url}> {item.label} </Link>
+              <Link className={`py-4 px-4 mx-2 block font-accent font-bold uppercase rounded-tr-md rounded-tl-md transition-element hover-element ${ segments[1] === item.url ? "active-navigation" : "focus-element" } `} href={item.url}> {item.label} </Link>
             </li>
           ))}
         </ul>
         {/** subnavigation */}
-        <section className={index!=="" ? 'absolute top-full left-0 w-full h-auto transition-element mt-4':'absolute top-full left-0 w-full h-0 max-h-[1000px] overflow-hidden transition-element'}>
+        <section onClick={handleCloseSubmenu} className={index!=="" ? 'absolute top-full left-0 w-full h-auto transition-element mt-4':'absolute top-full left-0 w-full h-0 max-h-[1000px] overflow-hidden transition-element'}>
           {/** urzadzenia-pralnicze */}
           {index === "1" ? <div onPointerLeave={handleCloseSubmenu} className="container mx-auto px-4 py-8 bg-white shadow-lg rounded-md border border-black-light">
             <div className='grid grid-cols-4 gap-4'>

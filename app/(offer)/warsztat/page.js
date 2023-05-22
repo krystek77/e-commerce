@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Equipment = props => {
+const Workshop = props => {
   return (
 
     <div className="container mx-auto">
@@ -11,6 +11,6 @@ const Equipment = props => {
   )
 }
 
-Equipment.propTypes = {}
+Workshop.propTypes = {}
 
-export default Equipment
+export default Workshop
