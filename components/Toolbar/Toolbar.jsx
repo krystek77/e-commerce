@@ -1,5 +1,7 @@
 import Link from 'next/link'
-import {MdMenuOpen,MdPerson,MdOutlineShoppingCart} from 'react-icons/md';
+import {MdMenu} from '@react-icons/all-files/md/MdMenu';
+import {MdPerson} from '@react-icons/all-files/md/MdPerson';
+import {MdShoppingCart} from '@react-icons/all-files/md/MdShoppingCart';
 
 const Toolbar = ({handleOpenMenu}) => {
   return (
@@ -11,7 +13,7 @@ const Toolbar = ({handleOpenMenu}) => {
             <div className="hidden md:block w-full max-w-2xl px-4 "><label className=""><input className="border border-black-light bg-slate-100 rounded-full w-full px-8 py-2 text-base" type="search"/></label></div>
             <div className="flex justify-end items-center flex-nowrap">
                 <button className="flex flex-col flex-center px-2 py-2 mx-1" type="button"><span><MdPerson className="w-6 h-6"/></span><span className="text-[10px] whitespace-nowrap">moje konto</span></button>
-                <button className="flex flex-col flex-center px-2 py-2 mx-1 md:mx-0" type="button"><span><MdOutlineShoppingCart className="w-6 h-6"/></span><span className="text-[10px] whitespace-nowrap">koszyk</span></button>
+                <button className="flex flex-col flex-center px-2 py-2 mx-1 md:mx-0" type="button"><span><MdShoppingCart className="w-6 h-6"/></span><span className="text-[10px] whitespace-nowrap">koszyk</span></button>
                 <button
                     className="md:hidden border rounded-full p-1 bg-black cursor-pointer group hover:bg-black-light"
                     type="button"
@@ -19,7 +21,7 @@ const Toolbar = ({handleOpenMenu}) => {
                     role="open menu"
                     onClick={handleOpenMenu}
                 >
-                    <MdMenuOpen className="w-6 h-6 text-white group-hover:text-black" />
+                    <MdMenu className="w-6 h-6 text-white group-hover:text-black" />
                 </button>
             </div>
         </div>

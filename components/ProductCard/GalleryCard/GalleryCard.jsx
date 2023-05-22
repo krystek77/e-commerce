@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import {images} from '@public/assets/images'
-import {BsChevronBarDown ,BsChevronBarUp} from 'react-icons/bs'
+import {BsChevronBarUp} from '@react-icons/all-files/bs/BsChevronBarUp';
+import {BsChevronBarDown} from '@react-icons/all-files/bs/BsChevronBarDown';
 
 const GalleryCard = ({items}) => {
   return items.length > 1 ? (

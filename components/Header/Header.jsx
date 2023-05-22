@@ -2,8 +2,10 @@ import { SearchForm } from "@components";
 import Image from "next/image";
 import Link from "next/link";
 import { images } from "@public/assets/images";
-import { BsFillPersonFill, BsFillCartFill } from "react-icons/bs";
-import { AiOutlineMenu } from "react-icons/ai";
+import { BsFillPersonFill } from '@react-icons/all-files/bs/BsFillPersonFill';
+import {AiOutlineMenu} from '@react-icons/all-files/ai/AiOutlineMenu';
+import {MdShoppingCart} from '@react-icons/all-files/md/MdShoppingCart';
+
 const Header = () => {
   return (
     <header className="py-8 lg:px-0">
@@ -52,7 +54,7 @@ const Header = () => {
             </div>
             <div className="whitespace-nowrap flex flex-col md:flex-row justify-center items-center pl-4 ">
               <div className="p-1 mr-2 mb-1 md:mb-0">
-                <BsFillCartFill className="w-8 h-8 text-black-medium" />
+                <MdShoppingCart className="w-8 h-8 text-black-medium" />
               </div>
               <p className="whitespace-nowrap  text-sm md:text-base font-semibold">
                 Twój koszyk

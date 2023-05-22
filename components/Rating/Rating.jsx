@@ -1,4 +1,4 @@
-import { AiFillStar } from "react-icons/ai";
+import { AiFillStar } from "@react-icons/all-files/ai/AiFillStar";
 const Rating = () => {
   return (
     <div className='flex justify-center items-start'>

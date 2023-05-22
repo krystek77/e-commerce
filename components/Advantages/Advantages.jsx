@@ -1,8 +1,8 @@
 import Link from 'next/link'
-import {RiStarSFill} from 'react-icons/ri'
-import {GiGoldBar} from 'react-icons/gi'
-import {FaTruck} from 'react-icons/fa'
-import {BsPhone} from 'react-icons/bs'
+import {RiStarSFill} from '@react-icons/all-files/ri/RiStarSFill'
+import {GiGoldBar} from '@react-icons/all-files/gi/GiGoldBar'
+import {FaTruck} from '@react-icons/all-files/fa/FaTruck'
+import {BsPhone} from '@react-icons/all-files/bs/BsPhone'
 
 const Advantages = () => {
   return (

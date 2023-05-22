@@ -1,10 +1,10 @@
 
 'use client'
 import {useState} from 'react';
-import {BsChevronBarLeft ,BsChevronBarRight} from 'react-icons/bs';
-import {MdClose } from 'react-icons/md';
+import {BsChevronBarLeft} from '@react-icons/all-files/bs/BsChevronBarLeft';
+import {BsChevronBarRight} from '@react-icons/all-files/bs/BsChevronBarRight';
+import {MdClose } from '@react-icons/all-files/md/MdClose';
 import Link from 'next/link';
-// import { Toolbar } from '@components';
 
 const Menu = () => {
   const [idSubmenu,setIdSubmenu] = useState("")

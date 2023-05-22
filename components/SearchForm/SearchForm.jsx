@@ -1,4 +1,4 @@
-import {BsSearch} from 'react-icons/bs';
+import {BsSearch} from '@react-icons/all-files/bs/BsSearch';
 
 export default function SearchForm(){
 

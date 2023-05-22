@@ -1,5 +1,6 @@
 
-import {FaRegHeart,FaHeart} from 'react-icons/fa';
+import {FaRegHeart} from '@react-icons/all-files/fa/FaRegHeart';
+import {FaHeart} from '@react-icons/all-files/fa/FaHeart';
 import PropTypes from 'prop-types';
 
 const LikeButton = ({isFavorite,handleFavorite}) => {

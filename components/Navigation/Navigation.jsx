@@ -32,12 +32,12 @@ const handleCloseSubmenu = (event) => {
             <div className='grid grid-cols-4 gap-4'>
               {/** pralnice */}
               <div className='border p-4 rounded-md border-black-light bg-slate-50'>
-                <Link href=""><h3 className=''>Pralnice</h3></Link>
+                <Link href="urzadzenia-pralnicze/pralnice"><h3 className=''>Pralnice</h3></Link>
                 <div className='flex flex-col justify-center items-start'>
-                  <Link href="" className='block py-1 font-light text-base'>pralnice bębnowe o załadunku czołowym</Link>
-                  <Link href="" className='block py-1 font-light text-base'>pralnice bębnowe o załadunku bocznym</Link>
-                  <Link href="" className='block py-1 font-light text-base'>pralnice bębnowe specjalne o załadunku czołowym</Link>
-                  <Link href="" className='block py-1 font-light text-base'>pralnice bębnowe specjalne o załadunku bocznym</Link>
+                  <Link href="urzadzenia-pralnicze/pralnice?type=pralnice bębnowe o załadunku czołowym" className='block py-1 font-light text-base'>pralnice bębnowe o załadunku czołowym</Link>
+                  <Link href="urzadzenia-pralnicze/pralnice?type=pralnice bębnowe o załadunku bocznym" className='block py-1 font-light text-base'>pralnice bębnowe o załadunku bocznym</Link>
+                  <Link href="urzadzenia-pralnicze/pralnice?type=pralnice bębnowe specjalne o załadunku czołowym" className='block py-1 font-light text-base'>pralnice bębnowe specjalne o załadunku czołowym</Link>
+                  <Link href="urzadzenia-pralnicze/pralnice?type=pralnice bębnowe specjalne o załadunku bocznym" className='block py-1 font-light text-base'>pralnice bębnowe specjalne o załadunku bocznym</Link>
                 </div>
               </div>
               {/** pralnicowirówki */}
