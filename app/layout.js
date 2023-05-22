@@ -1,6 +1,5 @@
-
 import '@styles/globals.css';
-import {Advantages,Header,Navigation} from '@components'
+import {Advantages,Header} from '@components'
 
 
 export const metadata = {
@@ -15,7 +14,6 @@ export default function RootLayout({children}) {
       <body>
         <Advantages />
         <Header />
-        <Navigation />
         {children}
       </body>
     </html>
