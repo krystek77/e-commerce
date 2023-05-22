@@ -342,7 +342,7 @@ const handleBackToMenu = (event) => { event.stopPropagation(); setId(""); }
             >
               <div className="grid grid-cols-3 gap-4">
                 {/** Pralnicowirówki samoobsługowe */}
-                <div className="border p-4 rounded-md border-accent-dark bg-accent-light bg-opacity-25">
+                <div className="border p-4 rounded-md border-black-light bg-slate-50">
                   <Link href="urzadzenia-pralnicze-samoobslugowe/pralnicowirowki">
                     <h3 className="">Pralnicowirówki</h3>
                   </Link>
@@ -359,13 +359,13 @@ const handleBackToMenu = (event) => { event.stopPropagation(); setId(""); }
                   </div>
                 </div>
                 {/** Suszarki samoobsługowe */}
-                <div className="border  p-4 rounded-md border-accent-dark bg-accent-light bg-opacity-25">
+                <div className="border  p-4 rounded-md border-black-light bg-slate-50">
                   <Link href="urzadzenia-pralnicze-samoobslugowe/suszarki">
                     <h3 className="">Suszarki</h3>
                   </Link>
                 </div>
                 {/** Małe profesjonalne zestawy samoobsługowe pralnicowirówka - suszarka */}
-                <div className="border p-4 rounded-md border-accent-dark bg-accent-light bg-opacity-25">
+                <div className="border p-4 rounded-md border-black-light bg-slate-50">
                   <Link href="urzadzenia-pralnicze-samoobslugowe/male-profesjonalne-zestawy-pralko-suszarka">
                     <h3 className="">
                       Małe, <b>profesjonalne zestawy samoobsługowe</b>, idealne
@@ -379,13 +379,13 @@ const handleBackToMenu = (event) => { event.stopPropagation(); setId(""); }
                   </p>
                 </div>
                 {/** Prasownice walcowe */}
-                <div className="border  p-4 rounded-md border-accent-dark bg-accent-light bg-opacity-25">
+                <div className="border  p-4 rounded-md border-black-light bg-slate-50">
                   <Link href="urzadzenia-pralnicze-samoobslugowe/prasownice-walcowe">
                     <h3 className="">Prasownice walcowe</h3>
                   </Link>
                 </div>
                 {/** Małe profesjonalne pralnicowirówki samoobsługowe */}
-                <div className="border p-4 rounded-md border-accent-dark bg-accent-light bg-opacity-25">
+                <div className="border p-4 rounded-md border-black-light bg-slate-50">
                   <Link href="urzadzenia-pralnicze-samoobslugowe/male-profesjonalne-pralnicowirowki">
                     <h3 className="">
                       Małe, <b>profesjonalne pralnicowirówki samoobsługowe</b>,
@@ -399,7 +399,7 @@ const handleBackToMenu = (event) => { event.stopPropagation(); setId(""); }
                   </p>
                 </div>
                 {/** Małe profesjonalne suszarki samoobsługowe */}
-                <div className="border p-4 rounded-md border-accent-dark bg-accent-light bg-opacity-25">
+                <div className="border p-4 rounded-md border-black-light bg-slate-50">
                   <Link href="urzadzenia-pralnicze-samoobslugowe/male-profesjonalne-suszarki">
                     <h3 className="">
                       Małe, <b>profesjonalne suszarki samoobsługowe</b>, idealne
@@ -412,7 +412,7 @@ const handleBackToMenu = (event) => { event.stopPropagation(); setId(""); }
                   </p>
                 </div>
                 {/** Małe profesjonalne zestawy samoobsługowe suszarka - suszarka */}
-                <div className="border p-4 rounded-md border-accent-dark bg-accent-light bg-opacity-25">
+                <div className="border p-4 rounded-md border-black-light bg-slate-50">
                   <Link href="urzadzenia-pralnicze-samoobslugowe/male-profesjonalne-zestawy-suszarko-suszarka">
                     <h3 className="">
                       Małe, <b>profesjonalne zestawy samoobsługowe</b>, idealne
