@@ -1,15 +1,20 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import { PageDescription, ProductList } from '@components';
+import PropTypes from 'prop-types';
 
 const Page = (params) => {
   return (
-    <div className='flex justify-between items-center flex-wrap'>
-      <div>Category(params): <b>{params.params.category[0]}</b></div>
-      <div>:SearchParams: <b>{params.searchParams.type}</b></div>
-    </div>
+    <>
+      <PageDescription title="Pralnice przemysłowe" />
+      <section className="container mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-320/fr auto-rows-auto gap-8 py-4">
+          <ProductList />
+        </div>
+      </section>
+    </>
   );
-}
+};
 
-Page.propTypes = {}
+Page.propTypes = {};
 
-export default Page
+export default Page;

@@ -129,6 +129,7 @@ const Navigation = ({ isOpenNavigation, handleCloseNavigation }) => {
               key={item._id}
               onPointerEnter={handleOpenSubmenu}
               onPointerLeave={handleCloseSubmenu}
+              onClick={handleCloseSubmenu}
               id={item._id}
             >
               <Link

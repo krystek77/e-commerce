@@ -17,6 +17,23 @@
         @apply 
         hover:text-black-medium
     }
+    .hover-back {
+        @apply
+       hover:bg-slate-100
+       hover:pl-8
+       hover:text-black-medium
+    }
+    .hover-link {
+        @apply
+        border-r-8
+        border-transparent
+        transition-all
+        duration-150
+        ease-in-out
+        hover:border-black
+        hover:pl-8
+        hover:text-black-medium
+    }
     .active-navigation {
         @apply
         bg-black

@@ -9,3 +9,5 @@ export {default as SpecialOffer} from './SepcialOffer/SpecialOffer';
 export {default as Input} from './Input/Input'
 export {default as SearchForm} from './SearchForm/SearchForm'
 export {default as PageDescription} from './PageDescription/PageDescription';
+export {default as Categories} from './Categories/Categories';
+export {default as ProductList} from './ProductList/ProductList';

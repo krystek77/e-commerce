@@ -2,7 +2,7 @@ const data = [
   {
     _id: 1,
     url: 'urzadzenia-pralnicze',
-    label: 'Urządzenia',
+    label: 'Urządzenia pralnicze',
     categories: [
         { _id: 1, url: 'pralnice', label: 'Pralnice' },
         { _id: 2, url: 'pralnicowirowki', label: 'Pralnicowirowki' },
@@ -20,7 +20,7 @@ const data = [
   {
     _id: 2,
     url: 'urzadzenia-pralnicze-samoobslugowe',
-    label: 'Urządzenia samoobsługowe',
+    label: 'Urządzenia pralnicze samoobsługowe',
     categories: [
         { _id: 1, url: 'pralnicowirowki', label: 'Pralnicowirowki' },
         { _id: 2, url: 'suszarki', label: 'Suszarki' },
