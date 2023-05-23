@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import {SortForm} from '@components'
 
 const ProductList = props => {
   return (
@@ -9,12 +10,7 @@ const ProductList = props => {
                 <span className='font-semibold'>znaleziono:</span>
                 <span><b className='border border-primary-dark bg-primary text-white px-2 py-1 mx-2 rounded-md'>126</b> produktów</span>
             </div>
-            <div>
-                <span>sortuj</span>
-                <select>
-                    <option>A</option>
-                </select>
-            </div>
+            <SortForm/>
         </div>
     </main>
   )

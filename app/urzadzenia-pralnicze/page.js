@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import React from "react";
-import {PageDescription,Categories,ProductList} from '@components';
+import {PageDescription,Categories,ProductList,SortForm} from '@components';
 import data from "@utils/data";
 
 function getData(slug) {
