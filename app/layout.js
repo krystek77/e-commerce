@@ -1,5 +1,5 @@
 import '@styles/globals.css';
-import {Advantages,Header, ProductCard} from '@components'
+import {Advantages,Header} from '@containers'
 
 
 export const metadata = {

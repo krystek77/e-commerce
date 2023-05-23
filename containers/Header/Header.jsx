@@ -1,6 +1,7 @@
 "use client"
 import {useState} from 'react'
-import { SearchForm,Navigation } from "@components";
+import { SearchForm } from "@components";
+import { Navigation } from '@containers';
 import Image from "next/image";
 import Link from "next/link";
 import { images } from "@public/assets/images";
