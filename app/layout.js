@@ -1,5 +1,5 @@
 import '@styles/globals.css';
-import {Advantages,Header} from '@containers'
+import {Advantages,Header,Footer} from '@containers'
 
 
 export const metadata = {
@@ -15,6 +15,7 @@ export default function RootLayout({children}) {
         <Advantages />
         <Header />
         {children}
+        <Footer/>
       </body>
     </html>
   );

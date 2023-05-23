@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { useSelectedLayoutSegments } from "next/navigation";
+import { useSelectedLayoutSegment } from "next/navigation";
 import Links from "@utils/data";
 import { images } from "@public/assets/images";
 import { BsChevronBarLeft } from "@react-icons/all-files/bs/BsChevronBarLeft";
@@ -12,7 +12,7 @@ import Image from "next/image";
 const Navigation = ({ isOpenNavigation, handleCloseNavigation }) => {
   const [index, setIndex] = useState("");
   const [id, setId] = useState("");
-  const segments = useSelectedLayoutSegments();
+  const segment = useSelectedLayoutSegment();
 
   const handleOpenSubmenu = (event) => {
     setIndex(event.currentTarget.id);
@@ -133,7 +133,7 @@ const Navigation = ({ isOpenNavigation, handleCloseNavigation }) => {
             >
               <Link
                 className={`py-4 px-4 mx-2 block font-accent font-bold uppercase rounded-tr-md rounded-tl-md transition-element hover-element ${
-                  segments[1] === item.url
+                  segment === item.url
                     ? "active-navigation"
                     : "focus-element"
                 } `}
