@@ -5,11 +5,15 @@ import PropTypes from 'prop-types';
 const Page = (params) => {
   return (
     <>
-      <PageDescription title="Pralnice przemysłowe" />
+      <PageDescription title="Przemysłowe pralnicowirówki" />
       <section className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-320/fr auto-rows-auto gap-8 py-4">
+        <div></div>
           <ProductList />
         </div>
+      </section>
+      <section className='container mx-auto'>
+        <div>Opis pralnicowirówek</div>
       </section>
     </>
   );

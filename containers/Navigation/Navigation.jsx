@@ -196,7 +196,7 @@ const Navigation = ({ isOpenNavigation, handleCloseNavigation }) => {
                 </div>
                 {/** pralnicowirówki */}
                 <div className="border col-span-2 p-4 rounded-md border-black-light bg-slate-50">
-                  <Link href="">
+                  <Link href="urzadzenia-pralnicze/pralnicowirowki">
                     <h3 className="">Pralnicowirówki</h3>
                   </Link>
                   <div className="flex flex-col justify-center items-start">
@@ -219,7 +219,7 @@ const Navigation = ({ isOpenNavigation, handleCloseNavigation }) => {
                 </div>
                 {/** Prasownice */}
                 <div className="border p-4 rounded-md border-black-light bg-slate-50">
-                  <Link href="">
+                  <Link href="urzadzenia-pralnicze/prasownice">
                     <h3 className="">Prasownice</h3>
                   </Link>
                   <div className="flex flex-col justify-center items-start">
@@ -248,7 +248,7 @@ const Navigation = ({ isOpenNavigation, handleCloseNavigation }) => {
                 <div className="border p-4 rounded-md border-black-light bg-slate-50"></div>
                 {/** Suszarki */}
                 <div className="border col-span-3 p-4 rounded-md border-black-light bg-slate-50">
-                  <Link href="">
+                  <Link href="urzadzenia-pralnicze/suszarki">
                     <h3 className="">Suszarki</h3>
                   </Link>
                   <div className="flex flex-col justify-center items-start">
@@ -265,13 +265,13 @@ const Navigation = ({ isOpenNavigation, handleCloseNavigation }) => {
                 </div>
                 {/** wirówki */}
                 <div className="border p-4 rounded-md border-black-light bg-slate-50">
-                  <Link href="">
+                  <Link href="urzadzenia-pralnicze/wirowki">
                     <h3 className="">Wirówki</h3>
                   </Link>
                 </div>
                 {/** Bariery higieny */}
                 <div className="border p-4 rounded-md border-black-light bg-slate-50">
-                  <Link href="">
+                  <Link href="urzadzenia-pralnicze/bariery-higieny">
                     <h3 className="">Bariery higieny</h3>
                   </Link>
                   <div className="flex flex-col justify-center items-start">
@@ -288,7 +288,7 @@ const Navigation = ({ isOpenNavigation, handleCloseNavigation }) => {
                 </div>
                 {/** wózki i regały */}
                 <div className="border col-span-2 p-4 rounded-md border-black-light bg-slate-50">
-                  <Link href="">
+                  <Link href="urzadzenia-pralnicze/wozki-i-regaly">
                     <h3 className="">Wózki i Regały</h3>
                   </Link>
                   <div className="flex flex-col justify-center items-start">

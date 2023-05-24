@@ -15,6 +15,7 @@ const data = [
         { _id: 9, url: 'male-profesjonalne-zestawy-pralnicowirowka-suszarka', label: 'Małe profesjonalne zestawy pralko - suszarka' },
         { _id: 10, url: 'male-profesjonalne-zestawy-suszarko-suszarka', label: 'Małe profesjonalne zestawy suszarko - suszarka' },
         { _id: 11, url: 'prasowanie-fasonowe', label: 'Prasowanie fasonowe' },
+        { _id: 12, url: 'wozki-i-regaly', label: 'Wózki i regały' },
     ],
   },
   {

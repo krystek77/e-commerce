@@ -11,4 +11,4 @@ export {default as SearchForm} from './SearchForm/SearchForm'
 export {default as PageDescription} from './PageDescription/PageDescription';
 export {default as Categories} from './Categories/Categories';
 export {default as ProductList} from './ProductList/ProductList';
-export {default as SortForm} from './SortForm/SortForm'
+export {default as SortBy} from './SortBy/SortBy'
