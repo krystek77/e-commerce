@@ -10,6 +10,10 @@ import DEFAULT_BANNER_630_210_WEBP from './banner_630_210.webp'
 import DEFAULT_BANNER_630_210_PNG from './banner_630_210.png'
 import DEFAULT_BANNER_1280_210_WEBP from './banner_1280_210.webp'
 import DEFAULT_BANNER_1280_210_PNG from './banner_1280_210.png'
+import CARD_LANDSCAPE_WEBP from './card_landscape.webp'
+import CARD_LANDSCAPE_PNG from './card_landscape.png'
+import CARD_PORTRAIT_WEBP from './card_portrait.webp'
+import CARD_PORTRAIT_PNG from './card_portrait.png'
 
 
 export const images = {
@@ -24,7 +28,11 @@ export const images = {
     DEFAULT_BANNER_630_210_WEBP,
     DEFAULT_BANNER_630_210_PNG,
     DEFAULT_BANNER_1280_210_WEBP,
-    DEFAULT_BANNER_1280_210_PNG
+    DEFAULT_BANNER_1280_210_PNG,
+    CARD_LANDSCAPE_PNG,
+    CARD_LANDSCAPE_WEBP,
+    CARD_PORTRAIT_PNG,
+    CARD_PORTRAIT_WEBP
 }
 
 export default images;
