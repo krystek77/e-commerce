@@ -1,4 +1,4 @@
-const LabelCard = ({ text }) => {
+const Label = ({ text }) => {
   let classes = "bg-gold";
   switch (text) {
     case "polecamy": classes = "bg-accent"; break;
@@ -8,4 +8,4 @@ const LabelCard = ({ text }) => {
   return <div className={`${classes} mr-1 mb-px uppercase text-xs font-medium font-inter px-2 py-1 rounded-sm`}>{text}</div>;
 };
 
-export default LabelCard;
+export default Label;

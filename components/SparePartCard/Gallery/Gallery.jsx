@@ -3,7 +3,7 @@ import {images} from '@public/assets/images'
 import {BsChevronBarUp} from '@react-icons/all-files/bs/BsChevronBarUp';
 import {BsChevronBarDown} from '@react-icons/all-files/bs/BsChevronBarDown';
 
-const GalleryCard = ({items}) => {
+const Gallery = ({items}) => {
   return items.length > 1 ? (
     <div className='absolute top-0 left-0 w-24 max-h-full rounded-md shadow-lg bg-white group-hover:-translate-x-28 group-hover:z-10 transition-transform duration-150'>
       <div className='h-full flex flex-col items-center px-1'>
@@ -27,4 +27,4 @@ const GalleryCard = ({items}) => {
     </div>
   ) : null;
 }
-export default GalleryCard;
+export default Gallery;

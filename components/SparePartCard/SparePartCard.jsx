@@ -4,11 +4,11 @@ import Link from "next/link";
 import Image from "next/image";
 import PropTypes from "prop-types";
 import { images } from "@public/assets/images";
-import { LabelCard, Rating, GalleryCard, LikeButton, SpecialOffer,Input } from "@components";
+import { Label, Rating, Gallery, LikeButton, SpecialOffer,Input } from "@components";
 
 const tmpImages = [1,2,3,4,5,6,7,8,9,10];
 
-const ProductCard = ({ color }) => {
+const SparePartCard = ({ color }) => {
   const [isFavorite, setIsFavorite] = useState(false);
   const handleFavorite = (event) => {
     event.preventDefault();
@@ -38,16 +38,16 @@ const ProductCard = ({ color }) => {
     <div className="p-4">
       
     <div className='relative group bg-white max-w-[320px]'>
-      <GalleryCard items={tmpImages} />
+      <Gallery items={tmpImages} />
       <div className='relative bg-white shadow-lg hover:scale-105 transition-transform duration-150'>
         <div
           className={`product-card ${cardColor} group  overflow-hidden border border-black-light rounded-md  max-w-xs hover:max-h-[1000px]`}>
           <Link href='/' className='relative block p-4 arc'>
             <div className='product-card_header relative flex justify-between items-start'>
               <div className='flex flex-wrap flex-1 justify-start items-center'>
-                <LabelCard text='polecamy' />
-                <LabelCard text="nowość"/>
-                <LabelCard text='okazja' />
+                <Label text='polecamy' />
+                <Label text="nowość"/>
+                <Label text='okazja' />
               </div>
               <Rating />
               <LikeButton isFavorite={isFavorite} handleFavorite={handleFavorite} />
@@ -86,8 +86,8 @@ const ProductCard = ({ color }) => {
   );
 };
 
-ProductCard.propTypes = {
+SparePartCard.propTypes = {
   color: PropTypes.string,
 };
 
-export default ProductCard;
+export default SparePartCard;
