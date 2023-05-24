@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    scroll-behavior: smooth;
+}
+
 @layer base {
     h1 { @apply text-black text-xl font-accent font-bold border-l-8 border-primary pl-4 my-8 uppercase }
     h2 { @apply text-black text-lg font-accent font-semibold border-l-[6px] border-accent pl-4 my-6 uppercase }
