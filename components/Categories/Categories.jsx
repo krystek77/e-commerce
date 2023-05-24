@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'next/link';
 import { BsChevronBarLeft } from "@react-icons/all-files/bs/BsChevronBarLeft";
+import {NumberOfItems} from '@components';
 
 const Categories = ({data}) => {
   return (
@@ -21,8 +22,11 @@ const Categories = ({data}) => {
         {data.categories?.length ? (
           <ul>
             {data.categories.map((item) => (
-              <li className=" border-b border-black-light" key={item._id}>
-                <Link className='block py-2 px-4 focus-element hover-link' href={`${data.url}/${item.url}`}>{item.label}</Link>
+              <li className="border-b border-black-light" key={item._id}>
+                <Link className='flex justify-between items-center py-2 px-4 focus-element hover-link' href={`${data.url}/${item.url}`}>
+                <span className='mr-2'>{item.label}</span>
+                <NumberOfItems/>
+                </Link>
               </li>
             ))}
           </ul>
