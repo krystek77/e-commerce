@@ -14,7 +14,6 @@ const ProductList = props => {
         </div>
         <div className='p-12 flex'>
           <ProductCard/>
-          <ProductCard/>
         </div>
     </main>
   )

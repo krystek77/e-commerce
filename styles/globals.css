@@ -64,6 +64,10 @@ html {
         clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
         transform-origin:bottom left;
     }
+    .clip-product-card {
+        clip-path: polygon(0 70%, 100% 60%, 100% 100%, 0% 100%);
+        transform-origin:bottom left;
+    }
 }
 /** product card */
 .arc { @apply before:block before:content-[""] before:w-[200%] before:h-[203px] before:absolute before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:z-[1] before:rounded-tr-[50%] before:rounded-tl-[50%] }
