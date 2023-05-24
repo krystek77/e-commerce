@@ -14,3 +14,4 @@ export {default as Categories} from './Categories/Categories';
 export {default as ProductList} from './ProductList/ProductList';
 export {default as SortBy} from './SortBy/SortBy'
 export {default as NumberOfItems} from './NumberOfItems/NumberOfItems'
+export {default as BreadCrump} from './BreadCrump/BreadCrump'

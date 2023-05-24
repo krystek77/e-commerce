@@ -1,5 +1,6 @@
 import '@styles/globals.css';
 import {Advantages,Header,Footer} from '@containers'
+import { BreadCrump } from '@components';
 
 
 export const metadata = {
@@ -14,6 +15,7 @@ export default function RootLayout({children}) {
       <body>
         <Advantages />
         <Header />
+        <BreadCrump/>
         {children}
         <Footer/>
       </body>
