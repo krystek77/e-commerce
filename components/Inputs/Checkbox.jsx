@@ -1,5 +1,5 @@
 
-const Input = ({color,label}) => {
+const Checkbox = ({color,label}) => {
   let ver = ""
   switch (color) {
     case "primary": ver=`border-primary shadow-[inset_0px_0px_4px_rgba(220,38,38,0.75)] before:bg-primary checked:shadow-[inset_0px_0px_6px_rgba(220,38,38,0.75)]`; break;
@@ -15,4 +15,4 @@ const Input = ({color,label}) => {
     </label>
   );
 }
-export default Input
+export default Checkbox

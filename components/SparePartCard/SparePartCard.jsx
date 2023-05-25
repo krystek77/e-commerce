@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import PropTypes from "prop-types";
 import { images } from "@public/assets/images";
-import { Label, Rating, Gallery, LikeButton, SpecialOffer,Input } from "@components";
+import { Label, Rating, Gallery, LikeButton, SpecialOffer,Checkbox } from "@components";
 
 const tmpImages = [1,2,3,4,5,6,7,8,9,10];
 
@@ -76,7 +76,7 @@ const SparePartCard = ({ color }) => {
           </Link>
           <div className='product-card_compare relative w-full h-0 max-h-[200px] group-hover:h-auto transition-all duration-150 ease-in-out'>
             <div className="relative px-4 py-2">
-              <Input label="porównaj" color={color}/>
+              <Checkbox label="porównaj" color={color}/>
             </div>
           </div>
         </div>
