@@ -12,7 +12,11 @@ const ProductList = props => {
             </div>
             <SortBy/>
         </div>
-        <div className='p-12 flex'>
+        <div className='p-12 flex flex-wrap'>
+          <ProductCard/>
+          <ProductCard/>
+          <ProductCard/>
+          <ProductCard/>
           <ProductCard/>
         </div>
     </main>
