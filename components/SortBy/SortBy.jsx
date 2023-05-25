@@ -17,7 +17,7 @@ const SortByItem = ({sortValue,handleInput,state,handleCloseOptions}) => {
       <label
         className={
           state === sortValue
-            ? 'cursor-pointer flex justify-start items-center py-1 mb-px bg-accent border border-accent-dark'
+            ? 'cursor-pointer flex justify-start items-center py-1 mb-px bg-gold border border-gold-dark'
             : 'cursor-pointer flex justify-start items-center py-1 mb-px border border-transparent'
         }
       >
@@ -73,8 +73,8 @@ const SortForm = props => {
           top-0 
           right-0 
           border
-          border-accent-dark
-          bg-accent 
+          border-gold-dark
+          bg-gold 
           h-full 
           rounded-tr-md 
           rounded-br-md 
@@ -83,7 +83,7 @@ const SortForm = props => {
         B
         </button>
       </div>
-      <div className='relative'>
+      <div className='relative z-10'>
         <div className={openOptions ? 
         'absolute top-full left-0 w-full h-auto transition-element':
         'absolute top-full left-0 w-full h-0 max-h-96 overflow-hidden transition-element'}>
