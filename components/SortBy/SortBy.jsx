@@ -1,5 +1,7 @@
 "use client"
 import {useEffect, useState} from 'react'
+import {BiChevronsDown} from '@react-icons/all-files/bi/BiChevronsDown'
+import {BiChevronsUp} from '@react-icons/all-files/bi/BiChevronsUp'
 import PropTypes from 'prop-types'
 
 const SORT_VALUES = {
@@ -80,7 +82,7 @@ const SortForm = props => {
           rounded-br-md 
           px-2' 
         >
-        B
+        {openOptions ? <BiChevronsUp className='w-4 h-4 text-black-dark'/>:<BiChevronsDown className='w-4 h-4 text-black-dark'/>}
         </button>
       </div>
       <div className='relative z-10'>
