@@ -11,14 +11,15 @@ function TextInputRounded({type="text",id="",label="",name="",value="",handleCha
     const [showErrorMessage,setShowErrorMessage] = useState(false);
     const handleClick = () => {setClicked(true)}
     const handleTogglePassword = () => {setTogglePassword((prevTogglePassword)=>!prevTogglePassword)}
+    
     const handleErrorMessage = (event)=> {
       if(event.type === "pointerenter"){setShowErrorMessage(true)}
       else if(event.type ==="pointerleave"){setShowErrorMessage(false)}
     }
     return (
       <div className="relative mb-8">
+        {error && showErrorMessage ?  <p className='absolute right-0 -top-8 -translate-y-full bg-primary-light border-primary rounded-lg shadow-lg p-4 text-sm text-white font-normal max-w-[180px] tooltip-triangle'><span className='line-clamp-2 text-sm text-white font-normal'>Wypełnij to pole koniecznie, hej ...</span></p> : null}
         {required ? <span className='text-black absolute right-4 -top-6 text-xs'>[ <span className='text-primary'>*</span> ]</span> : null}
-        {error && showErrorMessage ?  <p className='absolute right-0 -top-8 -translate-y-full bg-primary-light border-primary rounded-sm shadow-xl p-4 text-sm text-white font-normal line-clamp-2 max-w-[180px]'>Wypełnij to pole koniecznie, hej...</p> : null}
         <label
           className={`absolute left-4 -translate-y-1/2 bg-white px-2 py-1 text-sm text-black-medium ${
             clicked ? 'top-0  transition-element' : 'top-1/2 -z-10'
@@ -37,6 +38,7 @@ function TextInputRounded({type="text",id="",label="",name="",value="",handleCha
           placeholder={clicked ? '' : placeholder}
           onChange={handleChange}
           onClick={handleClick}
+          onBlur={()=>console.log("Validate data when input lost focus")}
         />
         <div className="absolute z-[10] right-2 top-1/2 -translate-y-1/2 flex justify-end items-center">
           {type === 'password' ? (

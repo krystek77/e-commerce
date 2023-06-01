@@ -112,6 +112,23 @@ html {
     before:border-l-transparent
     before:border-r-transparent
     before:border-t-transparent
-
+}
+.tooltip-triangle {
+    @apply
+    after:min-w-0
+    after:h-0
+    after:absolute
+    after:bottom-0
+    after:right-[7px]
+    after:translate-y-full
+    after:content-[""]
+    after:block
+    after:border-r-[12px]
+    after:border-l-[12px]
+    after:border-t-[16px]
+    after:border-b-transparent
+    after:border-l-transparent
+    after:border-r-transparent
+    after:border-t-primary-light
 
 }
