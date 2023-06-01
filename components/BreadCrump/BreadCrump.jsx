@@ -53,7 +53,7 @@ const BreadCrump = () => {
 
   return (
     <section>
-      <nav className="container mx-auto pt-8" aria-label="Breadcrump">
+      <nav className="container mx-auto py-4 px-4" aria-label="Breadcrump">
         <ol className='flex justify-start items-center flex-wrap text-sm'>
           <li className='flex justify-start items-center'>
             <span className='mr-2'><FcHome className='w-4 h-4'/></span>

@@ -9,6 +9,7 @@ export {default as LikeButton} from './LikeButton/LikeButton';
 export {default as SpecialOffer} from './SepcialOffer/SpecialOffer';
 export {default as Checkbox} from './Inputs/Checkbox'
 export {default as TextInput} from './Inputs/TextInput'
+export {default as TextInputRounded} from './Inputs/TextInputRounded';
 export {default as SearchForm} from './SearchForm/SearchForm'
 export {default as PageDescription} from './PageDescription/PageDescription';
 export {default as Categories} from './Categories/Categories';
