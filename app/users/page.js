@@ -1,4 +1,4 @@
-import {TextInput,Checkbox,FormButton} from '@components'
+import {TextInput,Checkbox,FormButton,MargetingAgreement} from '@components'
 import Link from 'next/link'
 import {IoPerson} from '@react-icons/all-files/io5/IoPerson'
 import {MdShoppingCart} from '@react-icons/all-files/md/MdShoppingCart'
@@ -53,13 +53,7 @@ function Page(){
                     w której zawarto obowiązek informacyjny związany z przetwarzeniam danych
                   </p>
                 </Checkbox>
-                <Checkbox color="primary">
-                  <p className='ml-4 text-sm'>
-                    Wyrażam zgodę na przesyłanie przez 
-                    <Link className='link' href="/">P.P.U.P Pralma sp. z o.o.</Link> 
-                    na mój <b className='font-bold'>email</b> informacji marketingowych i handlowych (w tym poprzez używanie telekomunikacyjnych urządzeń końcowych i automatycznych systemów wywołujących zgodnie z ustawą z dnia 16 lipca 2014 roku <b className='font-bold'>Prawo telekomunikacyjne</b>)
-                  </p>
-                </Checkbox>
+                <MargetingAgreement color="primary"/>
                 <FormButton label="Załóż konto"/>
                 <p className="text-xs max-w-sm mx-auto">
                   Po założeniu konta, na podany przez Ciebie adres wyślemy maila

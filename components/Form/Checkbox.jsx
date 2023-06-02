@@ -16,7 +16,7 @@ const Checkbox = ({color,label="",children=null}) => {
   );
 }
 Checkbox.propTypes = {
-  color:PropTypes.string,
+  color:PropTypes.oneOf(["primary","accent","gold","black","green"]),
   label:PropTypes.string,
   children:PropTypes.element
 }

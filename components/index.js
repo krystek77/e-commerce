@@ -10,10 +10,11 @@ export {default as SpecialOffer} from './SepcialOffer/SpecialOffer';
 export {default as Checkbox} from './Form/Checkbox'
 export {default as TextInput} from './Form/TextInput';
 export {default as FormButton} from './Form/Button';
+export {default as MargetingAgreement} from './Form/MargetingAgreement';
 export {default as SearchForm} from './SearchForm/SearchForm'
 export {default as PageDescription} from './PageDescription/PageDescription';
 export {default as Categories} from './Categories/Categories';
 export {default as ProductList} from './ProductList/ProductList';
-export {default as SortBy} from './SortBy/SortBy'
-export {default as NumberOfItems} from './NumberOfItems/NumberOfItems'
-export {default as BreadCrump} from './BreadCrump/BreadCrump'
+export {default as SortBy} from './SortBy/SortBy';
+export {default as NumberOfItems} from './NumberOfItems/NumberOfItems';
+export {default as BreadCrump} from './BreadCrump/BreadCrump';
