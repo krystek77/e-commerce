@@ -1,5 +1,5 @@
 
-import {TextInputRounded,Checkbox} from '@components'
+import {TextInput,Checkbox} from '@components'
 import Link from 'next/link'
 function Page(){
 
@@ -14,14 +14,14 @@ function Page(){
                 <p className="font-extrabold font-accent text-3xl mb-8">
                   Mam już konto
                 </p>
-                <TextInputRounded
+                <TextInput
                   required
                   id="email"
                   placeholder="Adres email"
                   label="Adres email"
                   error="error"
                 />
-                <TextInputRounded
+                <TextInput
                   required
                   type="password"
                   id="password"
@@ -86,13 +86,13 @@ function Page(){
                 <p className="font-extrabold font-accent text-3xl mb-8">
                   Nie mam konta
                 </p>
-                <TextInputRounded
+                <TextInput
                   id="email"
                   required
                   placeholder="Adres email"
                   label="Adres email"
                 />
-                <TextInputRounded
+                <TextInput
                   type="password"
                   required
                   id="password"
