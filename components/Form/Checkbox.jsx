@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-const Checkbox = ({color,label="",children=null}) => {
+const Checkbox = ({color,label="",children=null,handleCheckbox=()=>{},stateCheckbox=false,id,name}) => {
   let ver = ""
   switch (color) {
     case "primary": ver=`border-primary  before:bg-primary `; break;
@@ -10,7 +10,7 @@ const Checkbox = ({color,label="",children=null}) => {
   }
   return (
     <label className='relative flex justify-start items-center mb-4'>
-      <input className={`appearance-none ${ver} m-0 flex-shrink-0 bg-white w-6 h-6 border-2 rounded-sm outline-none grid place-content-center before:scale-0 before:transition-transform before:duration-150 before:ease-in-out before: content-[""] before:w-3 before:h-3 before:clip-checkbox checked:before:scale-100 focus: outline-2 focus: outline focus: outline-offset-1 focus:outline-black disabled:cursor-not-allowed disabled:before:bg-black-light disabled:border-black-light disabled:shadow-[inset_0px_0px_4px_rgba(221,224,238,0.75)] `} type='checkbox' />
+      <input onChange={handleCheckbox} checked={stateCheckbox} id={id} name={name} value={stateCheckbox} className={`appearance-none ${ver} m-0 flex-shrink-0 bg-white w-6 h-6 border-2 rounded-sm outline-none grid place-content-center before:scale-0 before:transition-transform before:duration-150 before:ease-in-out before: content-[""] before:w-3 before:h-3 before:clip-checkbox checked:before:scale-100 focus: outline-2 focus: outline focus: outline-offset-1 focus:outline-black disabled:cursor-not-allowed disabled:before:bg-black-light disabled:border-black-light disabled:shadow-[inset_0px_0px_4px_rgba(221,224,238,0.75)] `} type='checkbox' />
       <div className='ml-4 text-sm'>{label ? label : children}</div>
     </label>
   );
@@ -18,6 +18,10 @@ const Checkbox = ({color,label="",children=null}) => {
 Checkbox.propTypes = {
   color:PropTypes.oneOf(["primary","accent","gold","black","green"]),
   label:PropTypes.string,
-  children:PropTypes.element
+  children:PropTypes.element,
+  handleCheckbox:PropTypes.func,
+  stateCheckbox:PropTypes.bool,
+  id:PropTypes.string,
+  name:PropTypes.string
 }
 export default Checkbox

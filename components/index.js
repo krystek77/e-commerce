@@ -10,7 +10,7 @@ export {default as SpecialOffer} from './SepcialOffer/SpecialOffer';
 export {default as Checkbox} from './Form/Checkbox'
 export {default as TextInput} from './Form/TextInput';
 export {default as FormButton} from './Form/Button';
-export {default as MargetingAgreement} from './Form/MargetingAgreement';
+export {default as MarketingAgreement} from './Form/MarketingAgreement';
 export {default as SearchForm} from './SearchForm/SearchForm'
 export {default as PageDescription} from './PageDescription/PageDescription';
 export {default as Categories} from './Categories/Categories';

@@ -1,10 +1,11 @@
 import {BsSearch} from '@react-icons/all-files/bs/BsSearch';
+import PropTypes from 'prop-types';
 
-export default function SearchForm(){
+function SearchForm({id="search",name="search"}){
 
   return (
     <div className='relative flex-1'>
-      <form id='search' name='search' className='mx-4'>
+      <form id={id} name={name} className='mx-4'>
         <div className='absolute flex flex-col flex-center inset-y-0 left-4 rounded-tl-full rounded-bl-full px-4 font-inter text-md'>
           <BsSearch className='w-4 h-4 text-black'/>
         </div>
@@ -22,3 +23,10 @@ export default function SearchForm(){
     </div>
   );
 }
+
+SearchForm.propTypes = {
+  id:PropTypes.string,
+  name:PropTypes.string
+}
+
+export default SearchForm

@@ -32,9 +32,10 @@ function TextInput({type="text",id="",label="",name="",value="",handleChange=()=
           className={`border border-black-light rounded-full py-2 pl-6 ${
             type === 'password' ? 'pr-[76px]' : 'pr-12'
           } w-full outline-none focus-element`}
-          type={type === "password" && togglePassword ? "text":"password"}
+          type={type === "password" ? togglePassword ? "text":"password":"text"}
           id={id}
           name={name}
+          value={value}
           placeholder={clicked ? '' : placeholder}
           onChange={handleChange}
           onClick={handleClick}

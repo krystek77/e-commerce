@@ -49,7 +49,7 @@ const Header = () => {
             </button>
             {/** search form */}
             <div className="hidden lg:block flex-1">
-              <SearchForm />
+              <SearchForm id="searchOnLarge" name="searchOnLarge" />
             </div>
             <div className="flex items-center justify-end lg:flex-1">
               <div className="whitespace-nowrap flex flex-col md:flex-row justify-center items-center pr-4 border-r border-slate-100">
@@ -72,7 +72,7 @@ const Header = () => {
           </div>
           {/** search form */}
           <div className="lg:hidden w-full mt-2 lg:mt-0">
-            <SearchForm />
+            <SearchForm id="searchOnSmall" name="searchOnSmall" />
           </div>
         </div>
       </header>
