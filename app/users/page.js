@@ -1,6 +1,11 @@
 
 import {TextInput,Checkbox,FormButton} from '@components'
 import Link from 'next/link'
+import {IoPerson} from '@react-icons/all-files/io5/IoPerson'
+import {MdShoppingCart} from '@react-icons/all-files/md/MdShoppingCart'
+import {FaFileInvoice} from '@react-icons/all-files/fa/FaFileInvoice'
+import {GiGoldBar} from '@react-icons/all-files/gi/GiGoldBar'
+import {GiReceiveMoney} from '@react-icons/all-files/gi/GiReceiveMoney'
 function Page(){
 
 
@@ -25,29 +30,29 @@ function Page(){
                   Korzyści z konta
                 </p>
                 <ul className="mb-8">
-                  <li className="mb-2 flex justify-start items-center">
-                    <span className="mr-4 text-primary">IKON</span>
+                  <li className="mb-4 flex justify-start items-center">
+                    <IoPerson className='mr-4 text-primary w-10 h-10'/>
                     <span>Zamawiasz szybciej, bo pamiętamy Twoje dane.</span>
                   </li>
-                  <li className="mb-2 flex justify-start items-center">
-                    <span className="mr-4 text-primary">IKON</span>
+                  <li className="mb-4 flex justify-start items-center">
+                    <MdShoppingCart className='mr-4 text-primary w-10 h-10'/>
                     <span>Możesz łatwiej sprawdzić status zamówienia.</span>
                   </li>
-                  <li className="mb-2 flex justify-start items-center">
-                    <span className="mr-4 text-primary">IKON</span>
+                  <li className="mb-4 flex justify-start items-center">
+                    <FaFileInvoice className='mr-4 text-primary w-10 h-10'/>
                     <span>
                       Masz dostęp do faktur i historii Twoich zakupów.
                     </span>
                   </li>
-                  <li className="mb-2 flex justify-start items-center">
-                    <span className="mr-4 text-primary">IKON</span>
+                  <li className="mb-4 flex justify-start items-center">
+                    <GiReceiveMoney className='mr-4 text-primary w-10 h-10'/>
                     <span>
                       Uzyskasz dostęp do wyjątkowych ofert, promocji i
                       konkursów.
                     </span>
                   </li>
-                  <li className="mb-2 flex justify-start items-center">
-                    <span className="mr-4 text-primary">IKON</span>
+                  <li className="mb-4 flex justify-start items-center">
+                    <GiGoldBar className='mr-4 text-primary w-10 h-10'/>
                     <span>
                       Możesz wstąpić do programu lojalnościowego - to nic nie
                       kosztuje!
