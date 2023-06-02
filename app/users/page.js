@@ -12,23 +12,33 @@ import {BsPhone} from '@react-icons/all-files/bs/BsPhone'
 function Page(){
   const [login,setLogin] = useState({email:"",password:""});
   const [signup,setSignup] = useState({email:"",password:"",status:false,marketing:true})
+  const [isSubmittingLogin,setIsSubmittingLogin] = useState(false);
+  const [isSubmittingSignup,setIsSubmittingSignup] = useState(false);
+  const [errors,setErrors] = useState({login:{},signup:{}})
 
   const handleLogin = (event) => {
     event.preventDefault();
-    const formData = new FormData(event.currentTarget)
-    console.log("Zaloguj - formData",Object.fromEntries(formData))
+    setIsSubmittingLogin(true);
+    const formData = new FormData(event.currentTarget);
+    console.log('Zaloguj - formData', Object.fromEntries(formData));
+    setTimeout(function () {
+      setIsSubmittingLogin(false);
+    }, 3000);
   }
+
   const handleSignup = (event)=>{
     event.preventDefault();
+    setIsSubmittingSignup(true)
     const formData = new FormData(event.currentTarget)
     console.log("Załóż konto - formData",Object.fromEntries(formData));
+    setTimeout(function () {
+      setIsSubmittingSignup(false);
+    }, 3000);
   }
   const handleCheckbox = (event)=>{
-    console.log(event.target.name);
     setSignup({...signup,[event.target.name]:!signup[event.target.name]})
   }
   const handleInput = (event)=> {
-    console.log(event.target.name)
     if(event.target.id === "signupEmail" || event.target.id === "signupPassword"){
       setSignup({...login,[event.target.name]:event.target.value})
     }
@@ -36,9 +46,19 @@ function Page(){
       setLogin({...login,[event.target.name]:event.target.value})
     }
   }
-  console.log("LOGIN DATA",login);
-  console.log("SIGNUP DATA",signup)
-  
+  const handleValidation = (event) => {
+    console.log("Validate inputs when lost focus",event.currentTarget.name)
+    const errors={login:{},signup:{}};
+    if(login.email==="") errors.login.email="Musisz wypełnić to pole"
+    if(login.password==="") errors.login.password="Musisz podać hasło"
+    if(signup.email==="") errors.signup.email="Musisz wypełnić to pole"
+    if(signup.password==="") errors.signup.password="Musisz określić hasło"
+    console.log(errors)
+    setErrors(errors);
+  }
+  // console.log("LOGIN DATA",login);
+  // console.log("SIGNUP DATA",signup)
+  console.log(Object.keys(errors.login).length)
     return (
       <>
         <main className="container mx-auto px-4 pt-4 pb-8">
@@ -47,9 +67,9 @@ function Page(){
             <div className="flex-1 mr-12 py-8">
                 <p className="font-extrabold font-accent text-3xl mb-8"> Mam już konto </p>
                 <form onSubmit={handleLogin} name="loginForm">
-                  <TextInput required id="loginEmail" name="email" handleChange={handleInput} value={login.email} type="text" placeholder="Adres email" label="Adres email" error="error" />
-                  <TextInput required id="loginPassword" name="password" handleChange={handleInput} value={login.password} type="password"  placeholder="Hasło" label="Hasło" error="" />
-                  <FormButton type="submit" label="Zaloguj się"/>
+                  <TextInput required id="loginEmail" name="email" handleChange={handleInput} handleValidation={handleValidation} error={errors.login?.email} value={login.email} type="text" placeholder="Adres email" label="Adres email" />
+                  <TextInput required id="loginPassword" name="password" handleChange={handleInput} handleValidation={handleValidation} error={errors.login?.password} value={login.password} type="password"  placeholder="Hasło" label="Hasło" />
+                  <FormButton disabled={isSubmittingLogin} type="submit" label={isSubmittingLogin ? "Logowanie...":'Zaloguj się'}/>
                 </form>
                 <Link href="/" className="link text-sm" > Nie pamiętam hasła </Link>
               </div>
@@ -71,8 +91,8 @@ function Page(){
             <div className="flex-1 py-8 ">
                 <p className="font-extrabold font-accent text-3xl mb-8"> Nie mam konta </p>
                 <form onSubmit={handleSignup} name="signupForm">
-                  <TextInput id="signupEmail" name="email" value={signup.email} handleChange={handleInput} required placeholder="Adres email" label="Adres email" />
-                  <TextInput id="signupPassword" name="password" value={signup.password} handleChange={handleInput} type="password" required  placeholder="Hasło" label="Hasło" />
+                  <TextInput id="signupEmail" name="email" value={signup.email} handleChange={handleInput} handleValidation={handleValidation} error={errors.signup?.email} required placeholder="Adres email" label="Adres email" />
+                  <TextInput id="signupPassword" name="password" value={signup.password} handleChange={handleInput} handleValidation={handleValidation} error={errors.signup?.password} type="password" required  placeholder="Hasło" label="Hasło" />
                   <Checkbox color="primary" id="status" name="status" stateCheckbox={signup.status} handleCheckbox={handleCheckbox}>
                     <p className='ml-4 text-sm'>
                       [<span className='text-primary'> * </span>] 
@@ -84,7 +104,7 @@ function Page(){
                     </p>
                   </Checkbox>
                   <MarketingAgreement color="primary" id="marketing" name="marketing" stateCheckbox={signup.marketing} handleCheckbox={handleCheckbox}/>
-                  <FormButton type="submit" label="Załóż konto"/>
+                  <FormButton disabled={isSubmittingSignup} type="submit" label={isSubmittingSignup ? "Zakładanie konta...":"Załóż konto"}/>
                 </form>
                 <p className="text-xs max-w-sm mx-auto">
                   Po założeniu konta, na podany przez Ciebie adres wyślemy maila
